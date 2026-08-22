@@ -11,7 +11,6 @@ import { Dobra08Comparison } from './components/Dobra08Comparison';
 import { Dobra09Offer } from './components/Dobra09Offer';
 import { Dobra10FinalReinforcement } from './components/Dobra10FinalReinforcement';
 import { FaqSection } from './components/FaqSection';
-import { StickyBottomBar } from './components/StickyBottomBar';
 import { OrderSuccessModal } from './components/OrderSuccessModal';
 import { DeclineConfirmModal } from './components/DeclineConfirmModal';
 import { ShieldCheck, Lock, CheckCircle2 } from 'lucide-react';
@@ -36,16 +35,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#FFF4EC] text-[#5A3A31] font-sans antialiased selection:bg-[#E94F7A] selection:text-white flex flex-col">
-      {/* Top Warning & Progress Bar */}
-      <HeaderProgressBar onAddClick={handleAddOffer} />
+      {/* Top Warning & Progress Bar (Normal non-sticky flow) */}
+      <HeaderProgressBar />
 
       {/* Main Landing Sections: 10 Dobras */}
       <main className="flex-1 pb-16 sm:pb-24">
         {/* Dobra 01 — Topo da Página */}
-        <Dobra01Hero 
-          onAddClick={handleAddOffer} 
-          onDeclineClick={handleDeclineClick} 
-        />
+        <Dobra01Hero />
 
         {/* Dobra 02 — Conexão com o Produto Principal */}
         <Dobra02Connection />
@@ -68,7 +64,7 @@ export default function App() {
         {/* Dobra 08 — Comparação */}
         <Dobra08Comparison />
 
-        {/* Dobra 09 — Oferta Especial */}
+        {/* Dobra 09 — Oferta Especial (Botão de Compra Oficial) */}
         <Dobra09Offer 
           onAddClick={handleAddOffer} 
           onDeclineClick={handleDeclineClick} 
@@ -111,9 +107,6 @@ export default function App() {
           </p>
         </div>
       </footer>
-
-      {/* Sticky Bottom Floating Bar */}
-      <StickyBottomBar onAddClick={handleAddOffer} />
 
       {/* Interactive Modals */}
       <OrderSuccessModal 

@@ -2,21 +2,14 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { 
   Sparkles, 
-  CheckCircle2, 
-  ArrowRight, 
-  ShieldCheck, 
   Zap,
   TrendingUp,
   MessageCircle,
-  Calendar
+  Calendar,
+  ChevronDown
 } from 'lucide-react';
 
-interface Dobra01HeroProps {
-  onAddClick: () => void;
-  onDeclineClick: () => void;
-}
-
-export const Dobra01Hero: React.FC<Dobra01HeroProps> = ({ onAddClick, onDeclineClick }) => {
+export const Dobra01Hero: React.FC = () => {
   return (
     <section id="dobra-01" className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 bg-[#FFF4EC] text-[#5A3A31] border-b border-[#F0D5C7]">
       {/* Background ambient decorative light */}
@@ -76,7 +69,7 @@ export const Dobra01Hero: React.FC<Dobra01HeroProps> = ({ onAddClick, onDeclineC
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-[#FFE3D3] border-2 border-[#E94F7A]/40 rounded-3xl p-6 sm:p-8 shadow-md mb-8 relative overflow-hidden"
+          className="bg-[#FFE3D3] border-2 border-[#E94F7A]/40 rounded-3xl p-6 sm:p-8 shadow-md mb-4 relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#E94F7A]/10 rounded-full blur-2xl pointer-events-none" />
 
@@ -111,38 +104,15 @@ export const Dobra01Hero: React.FC<Dobra01HeroProps> = ({ onAddClick, onDeclineC
             </div>
           </div>
 
-          <p className="text-sm sm:text-base text-[#5A3A31] leading-relaxed max-w-xl mx-auto mb-6">
+          <p className="text-sm sm:text-base text-[#5A3A31] leading-relaxed max-w-xl mx-auto mb-4 font-medium">
             Um plano simples para você saber o que postar, como divulgar, como chamar clientes, como responder interessadas e como buscar pedidos durante a semana usando WhatsApp, status, indicação e recompra.
           </p>
 
-          {/* Primary CTA Button (Rosa Goiaba with White text - No price here) */}
-          <motion.button
-            id="hero-cta-button"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={onAddClick}
-            className="w-full sm:w-auto px-8 py-5 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-base sm:text-xl tracking-wide shadow-lg shadow-[#E94F7A]/25 transition-all cursor-pointer inline-flex items-center justify-center gap-3 border border-[#F27598]"
-          >
-            <CheckCircle2 className="w-6 h-6 text-white shrink-0" />
-            <span>SIM, QUERO ADICIONAR O AGENDA CHEIA</span>
-            <ArrowRight className="w-5 h-5 text-white shrink-0 hidden sm:inline-block" />
-          </motion.button>
-
-          {/* Micro guarantee badge */}
-          <div className="mt-4 flex items-center justify-center gap-2 text-xs text-[#5A3A31]">
-            <ShieldCheck className="w-4 h-4 text-[#2FA866]" />
-            <span>Garantia incondicional de 7 dias • 1 clique para adicionar</span>
+          <div className="inline-flex items-center gap-2 text-xs font-bold text-[#E94F7A] bg-[#FFF4EC] px-4 py-2 rounded-full border border-[#F0D5C7]">
+            <span>Veja abaixo como funciona o sistema passo a passo</span>
+            <ChevronDown className="w-4 h-4 animate-bounce text-[#E94F7A]" />
           </div>
         </motion.div>
-
-        {/* Decline link */}
-        <button
-          id="hero-decline-button"
-          onClick={onDeclineClick}
-          className="text-xs sm:text-sm text-[#5A3A31] hover:text-[#E94F7A] transition-colors underline underline-offset-4 decoration-[#5A3A31]/40 hover:decoration-[#E94F7A] cursor-pointer pt-2 pb-1 inline-block"
-        >
-          Não, obrigado. Quero continuar apenas com o Bolos Lucrativos.
-        </button>
       </div>
     </section>
   );

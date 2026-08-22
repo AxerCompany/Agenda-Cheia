@@ -7,7 +7,7 @@ interface HeaderProgressBarProps {
 
 export const HeaderProgressBar: React.FC<HeaderProgressBarProps> = () => {
   return (
-    <header className="sticky top-0 z-40 bg-[#3A241C] text-white shadow-md border-b border-[#2C1B15]">
+    <header className="w-full bg-[#3A241C] text-white shadow-sm border-b border-[#2C1B15]">
       <div className="max-w-4xl mx-auto px-4 py-3 sm:py-3.5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div className="flex items-center gap-2.5">
