@@ -14,14 +14,14 @@ import { FaqSection } from './components/FaqSection';
 import { OrderSuccessModal } from './components/OrderSuccessModal';
 import { DeclineConfirmModal } from './components/DeclineConfirmModal';
 import { ShieldCheck, Lock, CheckCircle2 } from 'lucide-react';
+import { CHECKOUT_URL } from './data/upsellData';
 
 export default function App() {
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [isDeclineModalOpen, setIsDeclineModalOpen] = useState(false);
 
   const handleAddOffer = () => {
-    setIsDeclineModalOpen(false);
-    setIsSuccessModalOpen(true);
+    window.location.href = CHECKOUT_URL;
   };
 
   const handleDeclineClick = () => {
@@ -30,7 +30,6 @@ export default function App() {
 
   const handleProceedWithDecline = () => {
     setIsDeclineModalOpen(false);
-    // Smooth custom notification or redirect simulation
   };
 
   return (

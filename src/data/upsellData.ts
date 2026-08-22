@@ -1,5 +1,7 @@
 import { DeliverableItem, ScriptExample, CalendarDayPreview } from '../types';
 
+export const CHECKOUT_URL = 'https://pay.wiapy.com/6a89026e3f863c746381b055';
+
 export const DELIVERABLES: DeliverableItem[] = [
   {
     id: 1,

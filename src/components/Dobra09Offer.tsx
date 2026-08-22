@@ -10,7 +10,7 @@ import {
   Check, 
   Gift
 } from 'lucide-react';
-import { DELIVERABLES } from '../data/upsellData';
+import { DELIVERABLES, CHECKOUT_URL } from '../data/upsellData';
 
 interface Dobra09OfferProps {
   onAddClick: () => void;
@@ -85,17 +85,17 @@ export const Dobra09Offer: React.FC<Dobra09OfferProps> = ({ onAddClick, onDeclin
           </div>
 
           {/* Primary CTA Button (Rosa Goiaba with white text) */}
-          <motion.button
+          <motion.a
             id="offer-cta-button"
+            href={CHECKOUT_URL}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            onClick={onAddClick}
-            className="w-full py-5 sm:py-6 px-8 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-lg sm:text-2xl tracking-wide shadow-xl shadow-[#E94F7A]/30 transition-all cursor-pointer flex items-center justify-center gap-3 border border-[#F27598] mb-4"
+            className="w-full py-5 sm:py-6 px-8 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-lg sm:text-2xl tracking-wide shadow-xl shadow-[#E94F7A]/30 transition-all cursor-pointer flex items-center justify-center gap-3 border border-[#F27598] mb-4 no-underline"
           >
             <CheckCircle2 className="w-7 h-7 text-white shrink-0" />
             <span>QUERO MINHA AGENDA CHEIA POR R$37</span>
             <ArrowRight className="w-6 h-6 text-white shrink-0 hidden sm:inline-block" />
-          </motion.button>
+          </motion.a>
 
           {/* Security & Guarantee badges */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-[#3A241C] pt-2 mb-6">
