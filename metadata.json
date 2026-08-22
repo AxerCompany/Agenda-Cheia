@@ -1,0 +1,6 @@
+{
+  "name": "Agenda Cheia - Sistema de Vendas",
+  "description": "Página oficial do Agenda Cheia — Sistema de Vendas para Bolos no Pote após compra do Bolos Lucrativos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
