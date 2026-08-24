@@ -69,7 +69,7 @@ export const DeclineConfirmModal: React.FC<DeclineConfirmModalProps> = ({
               onClick={onCancelDecline}
               className="w-full py-4 px-6 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-sm shadow-lg shadow-[#E94F7A]/30 cursor-pointer flex items-center justify-center gap-2 transition-all border border-[#F27598]"
             >
-              <span>SIM, QUERO ADICIONAR POR R$37</span>
+              <span>LIBERAR MEU ACESSO AGORA</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 

@@ -93,7 +93,7 @@ export const Dobra09Offer: React.FC<Dobra09OfferProps> = ({ onAddClick, onDeclin
             className="w-full py-5 sm:py-6 px-8 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-lg sm:text-2xl tracking-wide shadow-xl shadow-[#E94F7A]/30 transition-all cursor-pointer flex items-center justify-center gap-3 border border-[#F27598] mb-4 no-underline"
           >
             <CheckCircle2 className="w-7 h-7 text-white shrink-0" />
-            <span>QUERO MINHA AGENDA CHEIA POR R$37</span>
+            <span>LIBERAR MEU ACESSO AGORA</span>
             <ArrowRight className="w-6 h-6 text-white shrink-0 hidden sm:inline-block" />
           </motion.a>
 

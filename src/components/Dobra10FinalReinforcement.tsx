@@ -66,7 +66,7 @@ export const Dobra10FinalReinforcement: React.FC<Dobra10FinalReinforcementProps>
             className="w-full sm:w-auto px-8 py-5 sm:py-6 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-base sm:text-xl tracking-wide shadow-xl shadow-[#E94F7A]/30 transition-all cursor-pointer inline-flex items-center justify-center gap-3 border border-[#F27598] mb-5 no-underline"
           >
             <CheckCircle2 className="w-6 h-6 text-white shrink-0" />
-            <span>SIM, QUERO ADICIONAR AO MEU ACESSO POR R$37</span>
+            <span>LIBERAR MEU ACESSO AGORA</span>
             <ArrowRight className="w-5 h-5 text-white shrink-0 hidden sm:inline-block" />
           </motion.a>
 
