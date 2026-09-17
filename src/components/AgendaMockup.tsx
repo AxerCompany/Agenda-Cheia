@@ -1,6 +1,7 @@
 import React from 'react';
-import { Calendar, MessageSquare, Sparkles, ShoppingBag, CheckCircle2, ShieldCheck } from 'lucide-react';
-import mockupImg from '../assets/images/agenda_cheia_mockup_1787578480492.jpg';
+import { Calendar, MessageSquare, Sparkles, ShoppingBag, CheckCircle2, ShieldCheck, Target } from 'lucide-react';
+
+export const MOCKUP_IMAGE_URL = "https://i.postimg.cc/3Rh8CHSD/Chat-GPT-Image-17-de-set-de-2026-20-37-33.webp";
 
 export const AgendaMockup: React.FC = () => {
   return (
@@ -11,8 +12,8 @@ export const AgendaMockup: React.FC = () => {
         {/* High-Resolution Mockup Image */}
         <div className="relative rounded-2xl overflow-hidden shadow-lg border border-[#F0D5C7] bg-[#FFF4EC] mb-6 group">
           <img 
-            src={mockupImg} 
-            alt="Mockup do Agenda Cheia — Sistema de Vendas para Bolos no Pote" 
+            src={MOCKUP_IMAGE_URL} 
+            alt="Mockup do Desafio 5K com Doces — Sistema de Vendas" 
             referrerPolicy="no-referrer"
             className="w-full h-auto object-cover max-h-[580px] mx-auto transition-transform duration-500 group-hover:scale-[1.02]"
           />
@@ -22,8 +23,8 @@ export const AgendaMockup: React.FC = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-left">
           
           <div className="bg-[#FFF4EC] border border-[#F0D5C7] rounded-xl p-2.5 shadow-2xs">
-            <span className="text-[10px] uppercase font-black text-[#E94F7A] block">Passo a Passo</span>
-            <p className="text-xs font-bold text-[#3A241C] leading-tight">Calendário 30 Dias</p>
+            <span className="text-[10px] uppercase font-black text-[#E94F7A] block">Meta 30 Dias</span>
+            <p className="text-xs font-bold text-[#3A241C] leading-tight">Plano de Ação 5K</p>
           </div>
 
           <div className="bg-[#FFF4EC] border border-[#2FA866]/30 rounded-xl p-2.5 shadow-2xs">

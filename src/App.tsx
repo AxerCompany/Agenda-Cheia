@@ -15,71 +15,85 @@ import {
   Zap,
   TrendingUp,
   Lock,
-  ChevronRight
+  Calculator,
+  Flame,
+  Clock,
+  HeartHandshake,
+  ShoppingBag,
+  Instagram
 } from 'lucide-react';
-import { AgendaMockup } from './components/AgendaMockup';
+import { AgendaMockup, MOCKUP_IMAGE_URL } from './components/AgendaMockup';
+import { ScarcityCountdown } from './components/ScarcityCountdown';
+import { FaqSection } from './components/FaqSection';
 import { CHECKOUT_URL } from './data/upsellData';
 
 export default function App() {
-  const deliverables = [
+  const offerItems = [
     {
-      title: 'Plano 5 mil reais em 30 dias',
-      description: 'Plano simples e prático para faturar até R$5.000 por mês com doces.',
-      icon: TrendingUp,
-      tag: 'Meta R$5.000'
+      title: 'Plano de ação de 30 dias',
+      description: 'O passo a passo diário para saber exatamente o que executar.',
+      icon: Target,
+      tag: 'Direcionamento'
     },
     {
-      title: 'Calendário de vendas de 30 dias',
-      description: 'Para saber o que postar e oferecer durante o mês.',
+      title: 'Calendário de vendas',
+      description: 'Datas, formatos e temas para postar e movimentar seus pedidos.',
       icon: Calendar,
-      tag: 'Organização'
+      tag: 'Rotina Diária'
     },
     {
       title: 'Campanhas prontas para WhatsApp',
-      description: 'Mensagens para divulgar seus bolos e chamar clientes.',
+      description: 'Mensagens prontas para status, grupos e clientes para chamar pedidos.',
       icon: MessageSquare,
-      tag: 'Divulgação'
+      tag: 'Divulgação Rápida'
     },
     {
       title: 'Scripts para fechar pedidos',
-      description: 'Respostas prontas para conversar com interessadas e fechar vendas.',
-      icon: Target,
+      description: 'Respostas prontas para perguntas de preço, cardápio e objeções.',
+      icon: Zap,
       tag: 'Conversão'
     },
     {
       title: 'Sistema de recompra',
-      description: 'Mensagens para fazer clientes antigas comprarem de novo.',
+      description: 'Estratégia para fazer quem já comprou pedir novamente toda semana.',
       icon: RefreshCw,
       tag: 'Fidelização'
     },
     {
       title: 'Campanha de indicação',
-      description: 'Um modelo simples para suas clientes indicarem seus bolos.',
+      description: 'Método simples para amigas e clientes indicarem seus doces.',
       icon: Share2,
-      tag: 'Crescimento'
+      tag: 'Multiplicação'
     },
     {
-      title: 'Plano de ação para pedidos',
-      description: 'Um passo a passo para buscar seus primeiros ou novos pedidos.',
-      icon: Zap,
-      tag: 'Passo a Passo'
+      title: 'Plano para primeiros ou novos pedidos',
+      description: 'Roteiro prático para destravar vendas mesmo começando do absoluto zero.',
+      icon: TrendingUp,
+      tag: 'Início Rápido'
     }
   ];
 
-  const targetAudience = [
-    'quer vender bolo no pote, mas não sabe como conseguir clientes;',
-    'já vende, mas vende pouco;',
+  const targetAudienceItems = [
+    'quer começar do zero vendendo doces;',
+    'quer vender doces e não sabe por onde começar;',
+    'já vende, mas sente que vende pouco;',
     'posta no status e quase ninguém chama;',
-    'não sabe o que escrever para divulgar;',
+    'não sabe o que escrever para vender;',
+    'quer vender mais pelo WhatsApp;',
     'quer fazer clientes antigas comprarem de novo;',
-    'quer ter mais direção para vender.'
+    'quer parar de depender só da sorte;',
+    'quer ter um plano claro por 30 dias;',
+    'quer buscar uma meta maior com doces.'
   ];
 
-  const painPoints = [
-    'Não sabe o que postar.',
-    'Não sabe como chamar clientes.',
-    'Não sabe como divulgar no WhatsApp.',
-    'Não sabe como fazer a cliente comprar de novo.'
+  const channelSources = [
+    'pedidos pelo WhatsApp;',
+    'combos de doces;',
+    'encomendas para família;',
+    'clientes antigas comprando novamente;',
+    'indicação de amigas e vizinhas;',
+    'ofertas simples no status;',
+    'divulgação diária no Instagram.'
   ];
 
   return (
@@ -88,103 +102,126 @@ export default function App() {
       {/* Main Content Container */}
       <main className="flex-1">
         
-        {/* HERO SECTION */}
-        <section className="pt-10 pb-12 sm:pt-16 sm:pb-16 px-4 sm:px-6 border-b border-[#F0D5C7]">
+        {/* ========================================================================= */}
+        {/* DOBRA 01 — HERO */}
+        {/* ========================================================================= */}
+        <section id="dobra-hero" className="pt-10 pb-12 sm:pt-16 sm:pb-16 px-4 sm:px-6 border-b border-[#F0D5C7]">
           <div className="max-w-3xl mx-auto text-center">
             
             {/* Top Label */}
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FFE3D3] text-[#E94F7A] text-xs font-black uppercase tracking-wider mb-4 border border-[#F3CFBE]">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Página de Vendas — Agenda Cheia</span>
+              <span>Página de Vendas — Desafio 5K com Doces</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#3A241C] leading-tight mb-5 tracking-tight">
-              Como transformar seus doces em pedidos todos os dias e faturar até <span className="text-[#E94F7A]">R$5.000 por mês</span> com doces
+              Desafio <span className="text-[#E94F7A]">R$5.000 de lucro</span> em 30 dias com doces
             </h1>
 
             {/* Subheadline / Pitch */}
             <div className="max-w-2xl mx-auto text-base sm:text-lg text-[#5A3A31] font-medium leading-relaxed mb-6">
               <p>
-                Um sistema simples para você sair do improviso, saber o que postar, chamar clientes pelo WhatsApp, Instagram e status, e criar uma rotina de vendas para fazer seus doces venderem com mais frequência.
+                Mesmo começando do zero, entre no plano de 30 dias para transformar seus doces em pedidos todos os dias, vender mais e buscar <strong className="text-[#3A241C] font-extrabold">R$5.000 de lucro</strong> com uma rotina simples de vendas.
               </p>
             </div>
 
-            {/* [ESPAÇO PARA MOCKUP DO AGENDA CHEIA] */}
+            {/* [ESPAÇO PARA MOCKUP DO DESAFIO 5K COM DOCES] */}
             <AgendaMockup />
 
           </div>
         </section>
 
-        {/* SECTION: O PROBLEMA */}
-        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[#FFE3D3]/40 border-b border-[#F0D5C7]">
+        {/* ========================================================================= */}
+        {/* DOBRA 02 — URGÊNCIA */}
+        {/* ========================================================================= */}
+        <section id="dobra-urgencia" className="py-12 sm:py-16 px-4 sm:px-6 bg-[#FFE3D3]/40 border-b border-[#F0D5C7]">
           <div className="max-w-3xl mx-auto">
             
             <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-black text-[#3A241C] leading-tight">
-                O problema não é só fazer bolo no pote
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E94F7A]/10 text-[#E94F7A] text-xs font-bold uppercase tracking-wider mb-3">
+                <Flame className="w-3.5 h-3.5" />
+                <span>Alerta de Vendas</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#3A241C] leading-tight">
+                Você está perdendo pedidos todos os dias sem perceber
               </h2>
             </div>
 
-            <div className="bg-[#FFE3D3] border border-[#F3CFBE] rounded-3xl p-6 sm:p-8 shadow-sm">
-              <div className="text-base sm:text-lg font-bold text-[#3A241C] mb-4 space-y-1">
-                <p>Muita gente sabe preparar.</p>
-                <p className="text-[#E94F7A] font-black">Mas não sabe vender.</p>
-              </div>
+            <div className="bg-[#FFE3D3] border border-[#F3CFBE] rounded-3xl p-6 sm:p-8 shadow-sm space-y-5 text-base sm:text-lg text-[#5A3A31] leading-relaxed">
+              <p>
+                Toda vez que você deixa de postar, deixa de chamar clientes ou não sabe como oferecer seus doces, alguém que poderia comprar de você acaba comprando de outra pessoa que apareceu primeiro.
+              </p>
 
-              {/* List of struggles */}
-              <div className="space-y-2.5 my-5">
-                {painPoints.map((pain, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center gap-3 bg-[#FFF4EC] p-3 rounded-2xl border border-[#F0D5C7] text-sm sm:text-base font-semibold text-[#5A3A31]"
-                  >
-                    <div className="w-5 h-5 rounded-full bg-[#E94F7A]/15 text-[#E94F7A] flex items-center justify-center shrink-0">
-                      <X className="w-3.5 h-3.5 stroke-[2.5]" />
-                    </div>
-                    <span>{pain}</span>
+              <div className="grid sm:grid-cols-2 gap-3 pt-2">
+                <div className="bg-[#FFF4EC] p-4 rounded-2xl border border-[#F0D5C7] flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#E94F7A]/15 text-[#E94F7A] flex items-center justify-center shrink-0">
+                    <X className="w-4 h-4 stroke-[2.5]" />
                   </div>
-                ))}
+                  <span className="font-bold text-[#3A241C] text-sm sm:text-base">Não é falta de talento.</span>
+                </div>
+                <div className="bg-[#FFF4EC] p-4 rounded-2xl border border-[#F0D5C7] flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#E94F7A]/15 text-[#E94F7A] flex items-center justify-center shrink-0">
+                    <X className="w-4 h-4 stroke-[2.5]" />
+                  </div>
+                  <span className="font-bold text-[#3A241C] text-sm sm:text-base">Não é porque seus doces não são bons.</span>
+                </div>
               </div>
 
-              <div className="pt-3 border-t border-[#F0CFBE] space-y-2 text-sm sm:text-base text-[#5A3A31]">
-                <p className="italic">
-                  E no final fica esperando alguém aparecer.
+              <div className="bg-[#FFF4EC] p-4 sm:p-5 rounded-2xl border border-[#F0D5C7] space-y-2">
+                <p className="font-medium text-[#5A3A31]">
+                  O problema é que, sem uma rotina de vendas, você fica dependendo da sorte.
                 </p>
-                <p className="font-extrabold text-[#3A241C] text-base sm:text-lg">
-                  O <strong className="text-[#E94F7A]">Agenda Cheia</strong> foi criado para resolver essa parte.
+                <p className="text-[#E94F7A] font-black text-lg sm:text-xl">
+                  E sorte não enche agenda.
                 </p>
               </div>
+
+              <p className="text-sm sm:text-base font-semibold text-[#3A241C] pt-2 border-t border-[#F0CFBE]">
+                Mesmo que você esteja começando do zero, o que você precisa agora é de um plano simples para saber o que fazer todos os dias e transformar bolos no pote e doces em geral em uma fonte de renda de verdade.
+              </p>
             </div>
 
           </div>
         </section>
 
-        {/* SECTION: O QUE É */}
-        <section className="py-12 sm:py-16 px-4 sm:px-6 border-b border-[#F0D5C7]">
+        {/* ========================================================================= */}
+        {/* DOBRA 03 — PROMESSA */}
+        {/* ========================================================================= */}
+        <section id="dobra-promessa" className="py-12 sm:py-16 px-4 sm:px-6 border-b border-[#F0D5C7]">
           <div className="max-w-3xl mx-auto text-center">
             
-            <h2 className="text-2xl sm:text-3xl font-black text-[#3A241C] mb-6 leading-tight">
-              O que é o <span className="text-[#E94F7A]">Agenda Cheia</span>?
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#3A241C] mb-6 leading-tight">
+              Em 30 dias, você pode ter um plano para vender com muito mais direção
             </h2>
 
-            <div className="bg-[#FFE3D3] border border-[#F3CFBE] rounded-3xl p-6 sm:p-8 text-left space-y-4 shadow-sm">
-              <p className="text-base sm:text-lg font-black text-[#3A241C]">
-                É um sistema simples de vendas para bolos no pote.
+            <div className="bg-[#FFE3D3] border border-[#F3CFBE] rounded-3xl p-6 sm:p-8 text-left space-y-5 shadow-sm">
+              <p className="text-base sm:text-lg text-[#5A3A31] leading-relaxed">
+                O <strong className="text-[#3A241C] font-extrabold">Desafio 5K com Doces</strong> foi criado para quem quer fazer renda direto da cozinha de casa e começar a vender com mais estratégia e previsibilidade.
               </p>
 
-              <p className="text-sm sm:text-base text-[#5A3A31] leading-relaxed font-medium">
-                Ele te ajuda a saber o que divulgar, como oferecer, como chamar clientes e como movimentar seus pedidos durante a semana.
+              <div className="bg-[#FFF4EC] p-4 sm:p-5 rounded-2xl border border-[#F0D5C7] space-y-3">
+                <span className="text-xs uppercase font-black text-[#E94F7A] tracking-wider block">
+                  A ideia é simples:
+                </span>
+                <p className="text-sm sm:text-base text-[#3A241C] font-medium leading-relaxed">
+                  Você vai seguir um plano de ação para divulgar seus doces todos os dias, chamar clientes pelo WhatsApp, criar ofertas, recuperar clientes antigas e movimentar seus pedidos durante o mês.
+                </p>
+              </div>
+
+              <p className="text-sm sm:text-base text-[#5A3A31] leading-relaxed">
+                Mesmo começando do zero, você não precisa ficar perdida sem saber o que postar, como chamar clientes ou como buscar seus primeiros pedidos.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-3 pt-3 border-t border-[#F0CFBE]">
-                <div className="bg-[#FFF4EC] p-3.5 rounded-2xl border border-[#F0D5C7] flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#2FA866] mt-0.5 shrink-0 stroke-[3]" />
-                  <span className="text-xs sm:text-sm font-bold text-[#3A241C]">Serve para quem está começando agora.</span>
-                </div>
-                <div className="bg-[#FFF4EC] p-3.5 rounded-2xl border border-[#F0D5C7] flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#2FA866] mt-0.5 shrink-0 stroke-[3]" />
-                  <span className="text-xs sm:text-sm font-bold text-[#3A241C]">E também para quem já vende, mas quer vender com mais frequência.</span>
+              {/* Goal Highlight Box */}
+              <div className="pt-2">
+                <div className="bg-[#FFF4EC] border-2 border-[#E94F7A] rounded-2xl p-5 sm:p-6 text-center shadow-xs">
+                  <span className="text-xs sm:text-sm font-extrabold text-[#5A3A31] uppercase tracking-wider block mb-1">
+                    O objetivo é buscar uma meta clara:
+                  </span>
+                  <h3 className="text-xl sm:text-3xl font-black text-[#E94F7A] leading-tight">
+                    chegar a até R$5.000 de lucro em 30 dias vendendo doces.
+                  </h3>
                 </div>
               </div>
             </div>
@@ -192,66 +229,110 @@ export default function App() {
           </div>
         </section>
 
-        {/* SECTION: O QUE VOCÊ RECEBE */}
-        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[#FFE3D3]/30 border-b border-[#F0D5C7]">
+        {/* ========================================================================= */}
+        {/* DOBRA 04 — COMO ISSO PODE SER POSSÍVEL NA PRÁTICA */}
+        {/* ========================================================================= */}
+        <section id="dobra-pratica" className="py-12 sm:py-16 px-4 sm:px-6 bg-[#FFE3D3]/30 border-b border-[#F0D5C7]">
           <div className="max-w-3xl mx-auto">
             
             <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-black text-[#3A241C] leading-tight">
-                O que você recebe
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFE3D3] text-[#3A241C] text-xs font-bold uppercase tracking-wider mb-3 border border-[#F0D5C7]">
+                <Calculator className="w-3.5 h-3.5 text-[#E94F7A]" />
+                <span>Matemática Simples de Vendas</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#3A241C] leading-tight">
+                R$5.000 em 30 dias parece longe… até você quebrar em metas simples
               </h2>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              {deliverables.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div 
-                    key={index}
-                    className="bg-[#FFE3D3] border border-[#F3CFBE] rounded-2xl p-5 shadow-xs flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="w-9 h-9 rounded-xl bg-[#FFF4EC] text-[#E94F7A] flex items-center justify-center border border-[#F0D5C7] shadow-2xs">
-                          <Icon className="w-5 h-5" />
-                        </div>
-                        <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-[#FFF4EC] text-[#5A3A31] border border-[#F0D5C7] uppercase">
-                          {item.tag}
-                        </span>
+            <div className="bg-[#FFE3D3] border border-[#F3CFBE] rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
+              
+              <div className="space-y-3 text-base sm:text-lg text-[#5A3A31] leading-relaxed">
+                <p>
+                  Para buscar <strong className="text-[#3A241C] font-extrabold">R$5.000 de lucro em 30 dias</strong>, você não precisa pensar no mês inteiro de uma vez.
+                </p>
+                <p className="font-semibold text-[#3A241C]">
+                  Você precisa quebrar isso em uma meta diária.
+                </p>
+              </div>
+
+              {/* Math breakdown card */}
+              <div className="bg-[#FFF4EC] border-2 border-[#E94F7A]/40 rounded-2xl p-5 sm:p-6 text-center space-y-3 shadow-xs">
+                <p className="text-base sm:text-lg font-bold text-[#3A241C]">
+                  <strong>R$5.000 dividido por 30 dias dá cerca de R$167 de lucro por dia.</strong>
+                </p>
+                <div className="py-2 border-y border-[#F0CFBE]">
+                  <span className="text-xs uppercase font-extrabold text-[#E94F7A] tracking-wider block mb-1">
+                    Ou seja:
+                  </span>
+                  <h3 className="text-xl sm:text-3xl font-black text-[#3A241C]">
+                    <span className="text-[#E94F7A]">17 doces</span> vendidos por dia com <span className="text-[#2FA866]">R$10 de lucro</span> em cada um.
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5A3A31] font-medium">
+                  Quando você olha dessa forma, a meta começa a ficar mais clara.
+                </p>
+              </div>
+
+              <p className="text-sm sm:text-base text-[#5A3A31] font-medium leading-relaxed">
+                Mesmo começando do zero, essa meta fica muito mais possível quando você tem um plano para seguir todos os dias.
+              </p>
+
+              {/* Channels List */}
+              <div className="bg-[#FFF4EC] rounded-2xl p-5 border border-[#F0D5C7]">
+                <p className="font-extrabold text-sm sm:text-base text-[#3A241C] mb-3">
+                  Você pode buscar esse lucro com:
+                </p>
+                <ul className="grid sm:grid-cols-2 gap-2.5">
+                  {channelSources.map((channel, index) => (
+                    <li key={index} className="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#5A3A31]">
+                      <div className="w-4 h-4 rounded-full bg-[#2FA866]/20 text-[#2FA866] flex items-center justify-center shrink-0">
+                        <Check className="w-3 h-3 stroke-[3]" />
                       </div>
+                      <span>{channel}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-                      <h3 className="text-base font-black text-[#3A241C] mb-1.5">
-                        {item.title}
-                      </h3>
+              {/* Clarity conclusion */}
+              <div className="space-y-3 text-sm sm:text-base text-[#5A3A31] leading-relaxed pt-2">
+                <p>Você não precisa começar com uma estrutura perfeita.</p>
+                <p className="font-bold text-[#3A241C]">Você precisa começar com uma direção clara.</p>
+                <p>O segredo não é fazer tudo perfeito.</p>
+                <p className="font-extrabold text-[#E94F7A]">
+                  É aparecer todos os dias, chamar clientes e transformar seus doces em pedidos.
+                </p>
+                <p>
+                  Quando você para de vender no aleatório e começa a seguir um plano, a meta deixa de parecer impossível e começa a virar uma rotina de ação.
+                </p>
+                <div className="bg-[#FFF4EC] p-4 rounded-xl border border-[#F0D5C7] mt-3">
+                  <p className="font-bold text-[#3A241C]">
+                    É isso que o <strong className="text-[#E94F7A]">Desafio 5K com Doces</strong> te entrega: um caminho simples, prático e direto para você buscar uma meta maior nos próximos 30 dias, mesmo que esteja começando agora.
+                  </p>
+                </div>
+              </div>
 
-                      <p className="text-xs sm:text-sm text-[#5A3A31] font-medium leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
             </div>
 
           </div>
         </section>
 
-        {/* SECTION: PARA QUEM É */}
-        <section className="py-12 sm:py-16 px-4 sm:px-6 border-b border-[#F0D5C7]">
+        {/* ========================================================================= */}
+        {/* DOBRA 05 — PARA QUEM É */}
+        {/* ========================================================================= */}
+        <section id="dobra-publico" className="py-12 sm:py-16 px-4 sm:px-6 border-b border-[#F0D5C7]">
           <div className="max-w-3xl mx-auto">
             
             <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-black text-[#3A241C] leading-tight mb-2">
-                Para quem é
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#3A241C] leading-tight mb-2">
+                Esse desafio é para você que:
               </h2>
-              <p className="text-sm sm:text-base font-bold text-[#E94F7A]">
-                O Agenda Cheia é para você que:
-              </p>
             </div>
 
             <div className="bg-[#FFE3D3] border border-[#F3CFBE] rounded-3xl p-6 sm:p-8 shadow-sm">
-              <ul className="space-y-3">
-                {targetAudience.map((item, index) => (
+              <ul className="space-y-3 mb-6">
+                {targetAudienceItems.map((item, index) => (
                   <li 
                     key={index}
                     className="flex items-start gap-3 bg-[#FFF4EC] p-3.5 rounded-2xl border border-[#F0D5C7]"
@@ -265,31 +346,10 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-            </div>
 
-          </div>
-        </section>
-
-        {/* SECTION: POR QUE ISSO PODE TE AJUDAR */}
-        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[#FFE3D3]/40 border-b border-[#F0D5C7]">
-          <div className="max-w-3xl mx-auto text-center">
-            
-            <h2 className="text-2xl sm:text-3xl font-black text-[#3A241C] mb-6 leading-tight">
-              Por que isso pode te ajudar?
-            </h2>
-
-            <div className="bg-[#FFE3D3] border-2 border-[#E94F7A]/40 rounded-3xl p-6 sm:p-8 space-y-4 text-left shadow-sm">
-              <p className="text-base sm:text-lg font-black text-[#E94F7A]">
-                Porque não adianta só ter receita.
-              </p>
-
-              <p className="text-sm sm:text-base text-[#3A241C] font-semibold leading-relaxed">
-                Você também precisa saber como mostrar seus bolos para as pessoas certas.
-              </p>
-
-              <div className="bg-[#FFF4EC] p-4 rounded-2xl border border-[#F0D5C7]">
-                <p className="text-sm sm:text-base text-[#5A3A31] font-medium leading-relaxed">
-                  Com o <strong className="text-[#3A241C] font-bold">Agenda Cheia</strong>, você para de divulgar no improviso e passa a seguir um plano simples para vender durante a semana.
+              <div className="bg-[#FFF4EC] p-4 sm:p-5 rounded-2xl border border-[#E94F7A]/30 text-center">
+                <p className="text-sm sm:text-base font-extrabold text-[#3A241C]">
+                  Se você quer levar suas vendas mais a sério nos próximos 30 dias, esse desafio é para você.
                 </p>
               </div>
             </div>
@@ -297,48 +357,132 @@ export default function App() {
           </div>
         </section>
 
-        {/* SECTION: COMECE COM MAIS DIREÇÃO & CTA */}
-        <section className="py-14 sm:py-20 px-4 sm:px-6">
+        {/* ========================================================================= */}
+        {/* DOBRA 06 — OFERTA */}
+        {/* ========================================================================= */}
+        <section id="dobra-oferta" className="py-12 sm:py-16 px-4 sm:px-6 bg-[#FFE3D3]/40 border-b border-[#F0D5C7]">
+          <div className="max-w-3xl mx-auto">
+            
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E94F7A]/10 text-[#E94F7A] text-xs font-black uppercase tracking-wider mb-3">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Acesso Completo</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#3A241C] leading-tight mb-4">
+                Comece agora o Desafio 5K com Doces
+              </h2>
+              <p className="text-sm sm:text-base text-[#5A3A31] font-medium max-w-xl mx-auto leading-relaxed">
+                Receba acesso imediato ao plano de 30 dias para divulgar seus doces, chamar clientes, vender pelo WhatsApp e buscar <strong className="text-[#3A241C] font-extrabold">R$5.000 de lucro em 30 dias</strong>, mesmo começando do zero.
+              </p>
+            </div>
+
+            {/* Deliverables Grid */}
+            <div className="bg-[#FFE3D3] border border-[#F3CFBE] rounded-3xl p-6 sm:p-8 shadow-sm mb-6">
+              <h3 className="text-base sm:text-lg font-black text-[#3A241C] mb-4">
+                Você vai receber:
+              </h3>
+
+              <div className="grid sm:grid-cols-2 gap-3">
+                {offerItems.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div 
+                      key={index}
+                      className="bg-[#FFF4EC] border border-[#F0D5C7] rounded-2xl p-4 shadow-2xs flex items-start gap-3"
+                    >
+                      <div className="w-8 h-8 rounded-xl bg-[#FFE3D3] text-[#E94F7A] flex items-center justify-center shrink-0 border border-[#F0CFBE]">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="text-[10px] font-extrabold uppercase text-[#E94F7A] tracking-wider block">
+                          {item.tag}
+                        </span>
+                        <h4 className="text-xs sm:text-sm font-black text-[#3A241C] leading-snug">
+                          {item.title}
+                        </h4>
+                        <p className="text-[11px] sm:text-xs text-[#5A3A31] font-medium leading-tight mt-0.5">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ========================================================================= */}
+        {/* DOBRA 07 — CTA FINAL */}
+        {/* ========================================================================= */}
+        <section id="dobra-cta-final" className="py-14 sm:py-20 px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center">
             
             <div className="bg-[#FFE3D3] border-3 border-[#E94F7A] rounded-3xl sm:rounded-[36px] p-6 sm:p-10 shadow-xl relative overflow-hidden">
               
-              <h2 className="text-2xl sm:text-3xl font-black text-[#3A241C] mb-4 leading-tight">
-                Comece com mais direção
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#3A241C] mb-6 leading-tight">
+                Seus próximos 30 dias podem ser diferentes
               </h2>
 
               <div className="space-y-3 text-sm sm:text-base text-[#5A3A31] font-medium max-w-xl mx-auto mb-6 leading-relaxed">
-                <p>
-                  Você pode continuar tentando vender sem saber o que postar.
+                <div className="bg-[#FFF4EC] p-3.5 rounded-2xl border border-[#F0D5C7] space-y-1.5 text-left">
+                  <p className="flex items-center gap-2">
+                    <X className="w-4 h-4 text-[#E94F7A] shrink-0" />
+                    <span>Você não precisa continuar sem saber o que postar.</span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <X className="w-4 h-4 text-[#E94F7A] shrink-0" />
+                    <span>Você não precisa esperar cliente aparecer.</span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <X className="w-4 h-4 text-[#E94F7A] shrink-0" />
+                    <span>Você não precisa vender só quando alguém lembra de você.</span>
+                  </p>
+                </div>
+
+                <p className="pt-2 text-base text-[#3A241C] font-semibold">
+                  Mesmo começando do zero, você pode seguir um plano simples para divulgar seus doces, chamar clientes e buscar pedidos durante os próximos 30 dias.
                 </p>
-                <p className="font-semibold text-[#3A241C]">
-                  Ou pode seguir um plano simples para divulgar seus bolos, chamar clientes e gerar pedidos durante a semana.
-                </p>
-                <p className="text-xs sm:text-sm font-bold text-[#E94F7A] bg-[#FFF4EC] py-2 px-3 rounded-xl border border-[#F0D5C7]">
-                  Receba o <strong>Agenda Cheia</strong> com acesso digital imediato.
+                
+                <p className="text-sm font-extrabold text-[#E94F7A] bg-[#FFF4EC] py-2.5 px-4 rounded-xl border border-[#F0D5C7]">
+                  Entre agora no <strong>Desafio 5K com Doces</strong> e comece com direção.
                 </p>
               </div>
 
-              {/* Price Banner */}
-              <div className="bg-[#FFF4EC] border-2 border-[#E94F7A]/40 rounded-2xl p-4 sm:p-5 mb-6 max-w-sm mx-auto shadow-xs">
-                <div className="text-xs font-bold text-[#5A3A31] uppercase tracking-wider mb-1">
-                  Valor Único Promocional
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-black text-[#3A241C]">
-                  Por apenas <span className="text-[#E94F7A] text-3xl sm:text-4xl">R$37,00</span>
-                </h3>
+              {/* Product Mockup in Final CTA Block */}
+              <div className="my-6 max-w-md mx-auto bg-[#FFF4EC] border-2 border-[#F0D5C7] rounded-2xl p-2.5 sm:p-3 shadow-md group">
+                <img 
+                  src={MOCKUP_IMAGE_URL} 
+                  alt="Mockup do Desafio 5K com Doces" 
+                  referrerPolicy="no-referrer"
+                  className="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.01]"
+                />
+              </div>
+
+              {/* Scarcity Countdown in Final CTA Block */}
+              <ScarcityCountdown />
+
+              {/* Final Pricing Badge */}
+              <div className="mb-6">
+                <span className="text-xs uppercase font-extrabold text-[#5A3A31] tracking-wider block mb-1">
+                  Acesso Imediato
+                </span>
+                <span className="text-2xl sm:text-3xl font-black text-[#3A241C]">
+                  Por apenas <strong className="text-[#E94F7A] text-3xl sm:text-4xl">R$67,00</strong>
+                </span>
               </div>
 
               {/* Official CTA Button */}
               <motion.a
-                id="main-offer-cta"
+                id="main-final-cta"
                 href={CHECKOUT_URL}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full py-5 px-6 sm:px-8 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-base sm:text-xl tracking-wide shadow-xl shadow-[#E94F7A]/30 transition-all cursor-pointer inline-flex items-center justify-center gap-3 border border-[#F27598] mb-4 no-underline"
               >
                 <CheckCircle2 className="w-6 h-6 text-white shrink-0" />
-                <span>LIBERAR MEU ACESSO AGORA</span>
+                <span>LIBERAR ACESSO AGORA</span>
                 <ArrowRight className="w-5 h-5 text-white shrink-0" />
               </motion.a>
 
@@ -363,13 +507,18 @@ export default function App() {
           </div>
         </section>
 
+        {/* ========================================================================= */}
+        {/* RODAPÉ — PERGUNTAS FREQUENTES & GARANTIA DE 7 DIAS */}
+        {/* ========================================================================= */}
+        <FaqSection />
+
       </main>
 
       {/* Footer */}
       <footer className="bg-[#3A241C] text-[#FFE3D3] border-t border-[#2C1B15] py-8 px-4 text-center text-xs">
-        <div className="max-w-3xl mx-auto space-y-3">
-          <p className="text-[#FFE3D3]/80 font-bold">
-            Agenda Cheia — Sistema de Vendas para Bolos no Pote
+        <div className="max-w-3xl mx-auto space-y-2">
+          <p className="text-[#FFE3D3]/90 font-bold">
+            Desafio 5K com Doces — R$5.000 de Lucro em 30 Dias
           </p>
           <p className="text-[11px] text-[#FFE3D3]/60">
             © {new Date().getFullYear()} Todos os direitos reservados.
