@@ -25,6 +25,7 @@ import {
 import { AgendaMockup, MOCKUP_IMAGE_URL } from './components/AgendaMockup';
 import { ScarcityCountdown } from './components/ScarcityCountdown';
 import { FaqSection } from './components/FaqSection';
+import { WiapyUpsellButton } from './components/WiapyUpsellButton';
 import { CHECKOUT_URL } from './data/upsellData';
 
 export default function App() {
@@ -109,9 +110,9 @@ export default function App() {
           <div className="max-w-3xl mx-auto text-center">
             
             {/* Top Label */}
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FFE3D3] text-[#E94F7A] text-xs font-black uppercase tracking-wider mb-4 border border-[#F3CFBE]">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Página de Vendas — Desafio 5K com Doces</span>
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#2FA866]/15 text-[#238B53] text-[11px] sm:text-xs font-black uppercase tracking-wider mb-4 border border-[#2FA866]/30">
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#2FA866]" />
+              <span>ACESSO AO APLICATIVO BOLOS LUCRATIVOS LIBERADO COM SUCESSO</span>
             </div>
 
             {/* Main Headline */}
@@ -473,18 +474,8 @@ export default function App() {
                 </span>
               </div>
 
-              {/* Official CTA Button */}
-              <motion.a
-                id="main-final-cta"
-                href={CHECKOUT_URL}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full py-5 px-6 sm:px-8 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-base sm:text-xl tracking-wide shadow-xl shadow-[#E94F7A]/30 transition-all cursor-pointer inline-flex items-center justify-center gap-3 border border-[#F27598] mb-4 no-underline"
-              >
-                <CheckCircle2 className="w-6 h-6 text-white shrink-0" />
-                <span>LIBERAR ACESSO AGORA</span>
-                <ArrowRight className="w-5 h-5 text-white shrink-0" />
-              </motion.a>
+              {/* Official Wiapy 1-Click Upsell Button */}
+              <WiapyUpsellButton linkText="LIBERAR ACESSO AGORA" />
 
               {/* Security & Access Badges */}
               <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-[#5A3A31] font-medium pt-2">
