@@ -76,7 +76,7 @@ export const ScarcityCountdown: React.FC<ScarcityCountdownProps> = ({
       </div>
 
       <p className="text-[11px] sm:text-xs text-[#5A3A31] font-medium mt-2">
-        Condição promocional de <strong className="text-[#3A241C]">R$67,00</strong> válida somente enquanto o cronômetro estiver ativo.
+        Condição promocional de <strong className="text-[#3A241C]">R$47,00</strong> válida somente enquanto o cronômetro estiver ativo.
       </p>
     </div>
   );

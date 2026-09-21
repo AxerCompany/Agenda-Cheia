@@ -470,7 +470,7 @@ export default function App() {
                   Acesso Imediato
                 </span>
                 <span className="text-2xl sm:text-3xl font-black text-[#3A241C]">
-                  Por apenas <strong className="text-[#E94F7A] text-3xl sm:text-4xl">R$67,00</strong>
+                  Por apenas <strong className="text-[#E94F7A] text-3xl sm:text-4xl">R$47,00</strong>
                 </span>
               </div>
 
