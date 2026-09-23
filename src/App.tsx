@@ -27,6 +27,7 @@ import { InteractiveScriptsSimulator } from './components/InteractiveScriptsSimu
 import { AllSweetsSection } from './components/AllSweetsSection';
 import { FaqSection } from './components/FaqSection';
 import { DeclineConfirmModal } from './components/DeclineConfirmModal';
+import { WiapyUpsell } from './components/WiapyUpsell';
 import { CHECKOUT_URL, EXACT_DELIVERABLES } from './data/upsellData';
 
 export default function App() {
@@ -443,21 +444,13 @@ export default function App() {
                 </p>
               </div>
 
-              {/* Main Button CTA requested by user */}
-              <motion.a
-                id="main-offer-cta"
-                href={CHECKOUT_URL}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full py-4 sm:py-5 px-3 sm:px-8 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-xs sm:text-base md:text-lg tracking-wide shadow-xl shadow-[#E94F7A]/35 transition-all cursor-pointer flex items-center justify-center gap-1.5 sm:gap-3 border border-[#F27598] mb-4 no-underline text-center leading-tight"
-              >
-                <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-white shrink-0" />
-                <span className="flex-1 sm:flex-none">SIM! QUERO ADICIONAR O AGENDA CHEIA POR R$37</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white shrink-0" />
-              </motion.a>
+              {/* Main Wiapy One-Click Upsell */}
+              <div className="w-full">
+                <WiapyUpsell />
+              </div>
 
               {/* Security line requested by user */}
-              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-[#5A3A31] font-bold mb-5 sm:mb-6">
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-[#5A3A31] font-bold mt-2">
                 <span className="inline-flex items-center gap-1 shrink-0">
                   <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#2FA866]" />
                   Garantia de 7 Dias
@@ -472,17 +465,6 @@ export default function App() {
                   <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F4B84A]" />
                   Pagamento Seguro
                 </span>
-              </div>
-
-              {/* Link de Recusa requested by user */}
-              <div className="pt-4 border-t border-[#F0CFBE]">
-                <button
-                  id="decline-link-button"
-                  onClick={handleOpenDeclineModal}
-                  className="text-xs sm:text-sm text-[#8A6A61] hover:text-[#3A241C] underline cursor-pointer transition-colors break-words max-w-full inline-block leading-normal"
-                >
-                  Não, obrigada. Quero continuar sem o plano de vendas.
-                </button>
               </div>
 
             </div>
