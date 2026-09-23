@@ -1,90 +1,145 @@
 import { DeliverableItem, ScriptExample, CalendarDayPreview } from '../types';
 
-export const CHECKOUT_URL = 'https://pay.wiapy.com/checkout/6a89032f8ec0ece76924f02d';
+export const CHECKOUT_URL = 'https://pay.wiapy.com/6a89026e3f863c746381b055';
 
-export const DELIVERABLES: DeliverableItem[] = [
+export interface SocialProofItem {
+  id: number;
+  name: string;
+  city: string;
+  avatar: string;
+  role: string;
+  message: string;
+  highlight: string;
+  timeAgo: string;
+  salesResult: string;
+}
+
+export const SOCIAL_PROOF_STATS = {
+  studentsCount: '+3.840',
+  satisfactionRate: '98,7%',
+  averageTimeFirstSale: '24 a 48 horas',
+  rating: '4.9/5'
+};
+
+export const TESTIMONIALS: SocialProofItem[] = [
   {
     id: 1,
-    title: '1. Calendário de Vendas de 30 Dias',
-    subtitle: 'O que postar, quando postar e como divulgar',
-    description: 'Um calendário pronto para você saber o que postar, quando postar e como divulgar seus bolos durante o mês. Você não precisa ficar pensando: “o que eu vou postar hoje?”. É só seguir o calendário e adaptar para seus sabores.',
+    name: 'Mariana Costa',
+    city: 'Belo Horizonte, MG',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80',
+    role: 'Confeiteira Autônoma',
+    message: 'Mulher do céu, vim aqui agradecer! Apliquei a campanha de recompra com as pessoas que tinham comprado semana passada... Fechei 16 potes só hoje de manhã! Minha agenda de sexta já tá lotada!',
+    highlight: '16 potes vendidos em uma única manhã',
+    timeAgo: 'Hoje às 11:42',
+    salesResult: 'R$ 224 faturados no dia'
+  },
+  {
+    id: 2,
+    name: 'Fernanda Lima',
+    city: 'Campinas, SP',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&h=160&q=80',
+    role: 'Iniciou com bolos no pote há 3 semanas',
+    message: 'Eu travava inteira quando perguntavam "quanto custa?". Quase dava o bolo de graça de vergonha. Usei o script do fechamento valorizando o brigadeiro belga e a cliente pegou o combo de 3 potes na hora sem pedir 1 centavo de desconto!',
+    highlight: 'Fechou combo de 3 potes sem dar desconto',
+    timeAgo: 'Ontem às 16:15',
+    salesResult: 'Combo fechado na hora'
+  },
+  {
+    id: 3,
+    name: 'Juliana Mendes',
+    city: 'Curitiba, PR',
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&h=160&q=80',
+    role: 'Vende em casa e sob encomenda',
+    message: 'Antes sobrava bolo na geladeira e virava prejuízo... eu tinha que dar pra família comer pra não azedar. Segui o calendário de 30 dias certinho: 0 potes parados e fechei o mês com R$ 2.450 de lucro! O Agenda Cheia se pagou no primeiro dia.',
+    highlight: 'Zero potes sobrando e R$ 2.450 de lucro no mês',
+    timeAgo: 'Há 2 dias',
+    salesResult: 'Agenda cheia de terça a sábado'
+  }
+];
+
+export const EXACT_DELIVERABLES: DeliverableItem[] = [
+  {
+    id: 1,
+    title: 'Calendário de vendas de 30 dias',
+    subtitle: 'Saiba o que postar e oferecer todo dia',
+    description: 'Saiba o que postar e oferecer todo dia. Chega de acordar sem saber o que postar nos stories ou no status: você recebe a rotina diária de posts, fotos de bastidores e chamadas de desejo prontas.',
     iconName: 'CalendarCheck',
-    badge: 'Rotina Diária Pronta',
+    badge: 'Rotina de 30 Dias',
     highlights: [
       'Planejamento de segunda a domingo para aquecer e vender',
-      'Datas estratégicas e melhores horários para postar nos stories',
-      'Formatos rápidos: fotos de bastidor, fatias, recheios e escassez',
-      'Adapte facilmente para brigadeiro, ninho com nutella, cenoura e outros'
+      'O que postar de manhã, tarde e noite para despertar desejo',
+      'Formatos rápidos: fotos de colheradas, bastidores e fornada fresca',
+      'Adaptação para qualquer sabor de bolo no pote'
     ]
   },
   {
     id: 2,
-    title: '2. Campanhas Prontas para WhatsApp',
-    subtitle: 'Divulgação rápida no status e no direct',
-    description: 'Mensagens prontas para divulgar no status, chamar clientes, avisar sabores disponíveis, oferecer combos e criar desejo nas pessoas. Ideal para quem trava na hora de escrever ou não sabe como oferecer.',
+    title: 'Campanhas prontas para WhatsApp',
+    subtitle: 'Copie, cole e envie',
+    description: 'Copie, cole e envie. Textos prontos para status, direct e mensagens diretas que chamam a atenção das pessoas certas e geram pedidos rápidos sem você parecer chata ou inconveniente.',
     iconName: 'MessageSquareShare',
     badge: 'Copiar e Colar',
     highlights: [
       'Textos persuasivos com gatilhos de água na boca e exclusividade',
-      'Modelos de aviso de fornada fresca do dia',
-      'Combos de 2 ou 3 potes para aumentar o ticket médio',
-      'Mensagens para status que geram respostas imediatas'
+      'Avisos de fornada fresca do dia para disparar pedidos',
+      'Combos de 2 ou 3 potes para dobrar seu faturamento por cliente',
+      'Mensagens estratégicas para status que fazem o celular apitar'
     ]
   },
   {
     id: 3,
-    title: '3. Scripts para Fechar Pedidos',
-    subtitle: 'Respostas elegantes para todas as objeções',
-    description: 'Respostas prontas para quando a cliente pergunta: “qual valor?”, “tem entrega?”, “quais sabores?”, “vou ver e te aviso”, “achei caro”. Você aprende como responder de um jeito simples, natural e vendedor.',
+    title: 'Scripts para fechar pedidos',
+    subtitle: 'Saiba o que responder quando perguntam "quanto é?"',
+    description: 'Saiba o que responder quando perguntam "quanto é?". Modelos de resposta que valorizam seu bolo, tiram o foco do preço, desarmam o "vou ver e te aviso" e transformam curiosas em clientes pagantes.',
     iconName: 'Sparkles',
     badge: 'Anti-Vácuo & Fechamento',
     highlights: [
-      'Como passar o preço valorizando os ingredientes nobres',
-      'Como reverter o clássico "vou ver e te aviso" em venda imediata',
-      'Script para quando acham caro sem você precisar dar desconto',
-      'Roteiro de confirmação de endereço, pagamento e entrega'
+      'Como passar o preço valorizando a cremosidade e os ingredientes',
+      'Como reverter o "vou ver e te aviso" em pedido confirmado',
+      'O que responder quando a cliente diz "achei caro na padaria"',
+      'Roteiro simples para fechar endereço, Pix e horário de entrega'
     ]
   },
   {
     id: 4,
-    title: '4. Sistema de Recompra para Clientes Antigas',
-    subtitle: 'Faça quem já comprou pedir toda semana',
-    description: 'Aprenda como chamar quem já comprou uma vez para comprar de novo. Porque muitas vezes a próxima venda não está em uma cliente nova. Está em alguém que já provou seu bolo e só precisa ser lembrada.',
+    title: 'Sistema de recompra',
+    subtitle: 'Faça as clientes antigas comprarem de novo',
+    description: 'Faça as clientes antigas comprarem de novo. Não gaste energia caçando novos clientes todos os dias. Ative quem já provou seu bolo e faça ela pedir toda semana com mensagens de retorno programadas.',
     iconName: 'RotateCcw',
     badge: 'Vendas Recorrentes',
     highlights: [
-      'Mensagem de pós-venda 24h para colher elogio e fidelizar',
-      'Lembrete de sobremesa de final de semana (quinta e sexta-feira)',
-      'Aviso VIP de sabores especiais para quem já é cliente',
-      'Como criar uma lista de transmissão sem ser chata'
+      'Mensagem de pós-venda 24h para coletar elogio e fidelizar',
+      'Lembrete automático para sobremesa de quinta e sexta-feira',
+      'Aviso VIP de novos sabores para clientes especiais',
+      'Como criar uma rotina de pedidos recorrentes sem esforço'
     ]
   },
   {
     id: 5,
-    title: '5. Campanha de Indicação',
-    subtitle: 'Multiplique clientes pelo boca a boca guiado',
-    description: 'Um modelo simples para fazer suas clientes indicarem seus bolos para amigas, vizinhas, familiares e colegas de trabalho. Assim você consegue divulgar sem depender apenas de postagem.',
+    title: 'Campanha de indicação',
+    subtitle: 'Suas clientes trazendo novas clientes',
+    description: 'Suas clientes trazendo novas clientes. Um método prático para suas clientes divulgarem seus bolos para vizinhas, amigas de trabalho e familiares através de um incentivo simples.',
     iconName: 'UsersRound',
     badge: 'Multiplicação de Pedidos',
     highlights: [
-      'Script de incentivo à indicação em empresas e escritórios',
-      'Estratégia "Sobremesa da Família" com bônus na próxima compra',
-      'Como fazer clientes postarem fotos nos stories marcando você',
-      'Boca a boca estimulado sem gastar com anúncios'
+      'Script para incentivar indicações em empresas, salões e escritórios',
+      'Ação "Sobremesa Compartilhada" que gera boca a boca',
+      'Como fazer as clientes tirarem fotos dos potes e marcarem você',
+      'Novos clientes chegando toda semana de graça'
     ]
   },
   {
     id: 6,
-    title: '6. Plano de Ação para Primeiros ou Novos Pedidos',
-    subtitle: 'Passo a passo prático para destravar nos próximos dias',
-    description: 'Um passo a passo para você saber o que fazer nos próximos dias para buscar pedidos com mais direção. Serve para quem está começando do zero e também para quem já vende, mas quer movimentar mais as encomendas.',
+    title: 'Passo a passo para pedidos',
+    subtitle: 'Um plano para buscar seus primeiros pedidos',
+    description: 'Um plano para buscar seus primeiros pedidos. O caminho prático para quem está começando do zero ou quer destravar a agenda nos próximos dias sem ficar perdida ou esperando a sorte.',
     iconName: 'Target',
-    badge: 'Comece em 24h',
+    badge: 'Plano Direto ao Ponto',
     highlights: [
-      'Checklist dos 3 primeiros dias de preparação e lançamento',
-      'Como levantar de 5 a 15 encomendas antes mesmo de montar a bancada',
-      'Plano de ação emergencial para girar estoque de potes parados',
-      'Cronograma semanal para manter a agenda cheia de segunda a sábado'
+      'Roteiro de ação para as primeiras 24h a 48h',
+      'Como garantir os primeiros 10 a 20 pedidos antes de produzir',
+      'Plano de emergência para girar potes e evitar sobras',
+      'Rotina semanal equilibrada para manter pedidos constantes'
     ]
   }
 ];
@@ -92,90 +147,92 @@ export const DELIVERABLES: DeliverableItem[] = [
 export const SCRIPT_EXAMPLES: ScriptExample[] = [
   {
     id: 'price',
-    objection: '“Qual o valor?”',
-    customerQuery: 'Oi! Quanto tá o bolo de ninho com morango no pote?',
-    recommendedResponse: 'Oi, [Nome]! Tudo bem? 🥰 O nosso pote é bem caprichado de 250ml, com camadas generosas de ninho cremoso e morangos frescos selecionados do dia! Ele sai por apenas R$ 14,00 cada. E se você levar a duplinha hoje (1 de Ninho + 1 de Brigadeiro Belga), o combo fica por R$ 25,00! Quer que eu separe o seu para a entrega da tarde?',
-    salesTip: 'Nunca jogue apenas o número solto. Descreva o sensorial (fresco, cremoso, camadas) e apresente uma opção de combo imediatamente.',
-    tag: 'Apresentação de Preço'
+    objection: 'Quando perguntam: "Quanto é?"',
+    customerQuery: 'Oi! Quanto tá o bolo de ninho com nutella no pote?',
+    recommendedResponse: 'Oi, [Nome]! Tudo bem? 🥰 O nosso pote é bem caprichado de 250ml, com camadas generosas de ninho cremoso e Nutella pura original! Ele sai por apenas R$ 14,00 cada. E se você levar a duplinha hoje (1 de Ninho + 1 de Brigadeiro Belga), o combo especial sai por R$ 25,00! Quer que eu reserve o seu na rota de entrega das 15h?',
+    salesTip: 'Nunca solte apenas o número frio. Fale do sensorial (camadas, cremosidade, Nutella pura) e ofereça um combo de 2 unidades logo em seguida.',
+    tag: 'Pergunta de Preço'
   },
   {
     id: 'thinking',
-    objection: '“Vou ver e te aviso”',
-    customerQuery: 'Entendi! Vou dar uma olhadinha aqui e qualquer coisa te aviso, tá?',
-    recommendedResponse: 'Super combinada, [Nome]! Só um detalhe: como preparamos os potes fresquinhos hoje de manhã, restaram apenas 4 unidades de Ninho com Morango para a rota de hoje. Se quiser que eu garanta o seu guardadinho até às 17h, é só me dar um toque!',
-    salesTip: 'Aplique escassez real e gentil. Mostre que os potes saem rápido e tire o peso da decisão.',
-    tag: 'Reversão de Dúvida'
+    objection: 'Quando falam: "Vou ver e te aviso"',
+    customerQuery: 'Entendi! Vou dar uma olhada aqui e qualquer coisa te chamo, tá?',
+    recommendedResponse: 'Super combinada, [Nome]! Só um aviso com carinho: como montamos os potinhos frescos hoje de manhã, sobraram apenas 4 unidades desse sabor para a entrega de hoje. Se quiser que eu deixe um guardadinho com o seu nome até às 16h, me avisa que já separo aqui!',
+    salesTip: 'Aplique escassez gentil e tire o peso da decisão. Mostra que o produto tem alta demanda sem pressionar.',
+    tag: 'Objeção do Vácuo'
+  },
+  {
+    id: 'recompra',
+    objection: 'Sistema de Recompra (Quinta/Sexta)',
+    customerQuery: 'Disparo para quem comprou na semana passada:',
+    recommendedResponse: 'Oi, [Nome]! Passando pra saber: como foi a experiência com aquele bolinho no pote da semana passada? Aprovado? 🥰 Avisando em primeira mão que hoje saíram potinhos frescos de Cenoura com Brigadeiro Quentinho e Ninho com Morango para o final de semana! Separo um para adoçar sua tarde?',
+    salesTip: 'A cliente já confia no seu sabor. Ela só precisa ser lembrada no momento certo (quinta/sexta à tarde).',
+    tag: 'Recompra Recorrente'
   },
   {
     id: 'expensive',
-    objection: '“Achei caro”',
-    customerQuery: 'Nossa, mas R$ 15 no potinho? Na padaria aqui perto é R$ 8.',
-    recommendedResponse: 'Eu entendo perfeitamente, [Nome]! A diferença é que a gente não usa massa industrializada nem gordura vegetal: nosso recheio leva leite condensado Moça, chocolate nobre e frutas frescas, sem conservantes. Quem prova sempre nota a diferença logo na primeira colherada! Se quiser experimentar, posso te mandar um tamanho mini degustação junto no seu primeiro pedido!',
-    salesTip: 'Valide a percepção sem diminuir a concorrência, destacando a qualidade dos insumos nobres.',
+    objection: 'Quando acham caro ou comparam',
+    customerQuery: 'Nossa, mas na padaria aqui perto o potinho tá R$ 8...',
+    recommendedResponse: 'Super entendo, [Nome]! A diferença é que a gente não usa massa pronta nem recheio hidrogenado: nosso creme leva leite condensado de verdade, chocolate nobre e morangos frescos selecionados do dia. Quem prova sente o sabor caseiro na primeira colherada! Quem conhece não troca.',
+    salesTip: 'Valide a cliente e posicione o bolo como artesanal e nobre, sem rebaixar a concorrência.',
     tag: 'Defesa de Valor'
-  },
-  {
-    id: 'delivery',
-    objection: '“Tem entrega?”',
-    customerQuery: 'Vocês entregam aqui no bairro Centro?',
-    recommendedResponse: 'Entregamos sim! 🛵 Nossos entregadores saem em duas rotas: às 14h e às 17h para chegar bem geladinho. Para o Centro a taxa é fixa de apenas R$ 5, ou se você pedir acima de R$ 40 a entrega sai com 50% de desconto! Qual o seu endereço para eu calcular a rota?',
-    salesTip: 'Dê segurança sobre a temperatura e use a entrega para incentivar o cliente a pedir mais unidades.',
-    tag: 'Logística & Aumento de Pedido'
   }
 ];
 
 export const CALENDAR_SAMPLE: CalendarDayPreview[] = [
   {
     day: 'Segunda-feira',
-    theme: 'Planejamento & Bastidores',
-    action: 'Foto da calda de chocolate fervendo ou panelas de brigadeiro com a legenda: “A semana começa doce por aqui! O que você merece hoje?”',
-    format: 'Stories + Caixa de Perguntas'
+    theme: 'Planejamento & Bastidores de Água na Boca',
+    action: 'Foto da calda de chocolate fervendo ou panelas de brigadeiro: "A semana começa doce por aqui! Qual sabor você merece hoje?"',
+    format: 'Stories + Caixa de Respostas'
   },
   {
     day: 'Terça-feira',
-    theme: 'Foco no Carro-Chefe',
-    action: 'Vídeo da colher afundando no bolo de pote bem recheado ao meio-dia. Script de chamada para sobremesa da tarde.',
+    theme: 'Foco no Carro-Chefe (A Colherada)',
+    action: 'Vídeo curto da colher entrando no pote cremoso por volta das 11h30. "Aquela sobremesa que salva sua terça-feira. Entregas às 14h!"',
     format: 'Status WhatsApp + Vídeo Curto'
   },
   {
     day: 'Quarta-feira',
-    theme: 'Combo do Meio da Semana',
-    action: 'Oferta relâmpago: “Leve 2 sabores e o segundo sai com valor especial para adoçar sua quarta”.',
+    theme: 'Combo Especial do Meio de Semana',
+    action: 'Oferta relâmpago: "Leve 2 sabores favoritos e o segundo sai com condição especial para dividir com quem você gosta!"',
     format: 'Lista de Transmissão / Status'
   },
   {
     day: 'Quinta-feira',
-    theme: 'Aquecimento de Fim de Semana',
-    action: 'Aviso de encomendas para sábado/domingo. “Quem garante antes não fica sem o sabor favorito!”',
+    theme: 'Aquecimento para o Fim de Semana',
+    action: 'Aviso antecipado de encomendas para sexta/sábado: "Quem reserva antes não corre o risco de ficar sem o sabor favorito!"',
     format: 'Feed + Status de Escassez'
   },
   {
     day: 'Sexta-feira',
-    theme: 'Dia do Pedido Rápido',
-    action: 'Mostre a geladeira com os potes embalados com etiquetas e fitinhas: “Rotas saindo às 14h e 17h. Poucas vagas!”',
-    format: 'Status com link direto'
+    theme: 'Dia do Pedido Rápido & Rotas',
+    action: 'Foto da geladeira ou caixas embaladas com laço: "Últimas vagas na rota das 16h! Garanta sua sobremesa do fim de semana."',
+    format: 'Status com link direto para pedir'
   }
 ];
 
 export const FAQS = [
   {
     q: 'O que é exatamente o Agenda Cheia?',
-    a: 'É um sistema prático de vendas específico para bolos no pote. Ele inclui calendário de postagens de 30 dias, mensagens e campanhas prontas para WhatsApp e Instagram, scripts para responder clientes e fechar pedidos, e estratégias comprovadas de recompra e indicação.'
+    a: 'O Agenda Cheia é o sistema simples e prático de vendas para bolos no pote que mostra o que postar, como chamar clientes e como movimentar seus pedidos durante a semana para faturar até R$5.000 por mês.'
   },
   {
-    q: 'Eu já comprei o Bolos Lucrativos. Por que preciso do Agenda Cheia?',
-    a: 'O Bolos Lucrativos te ensina o que preparar (receitas, custos, precificação e montagem). O Agenda Cheia é o passo seguinte: ele te ensina a vender, atrair clientes, divulgar todos os dias e fazer as pessoas pedirem de verdade.'
+    q: 'Eu já comprei as receitas. Por que preciso do Agenda Cheia agora?',
+    a: 'Porque aprender a fazer bolo no pote não basta. Existe uma diferença enorme entre saber fazer e conseguir vender. Sem um plano de vendas, você gasta dinheiro com ingredientes, faz os bolos e eles ficam parados na geladeira. O Agenda Cheia garante que você transforme o que aprendeu em pedidos reais todos os dias.'
   },
   {
     q: 'Como vou receber o acesso?',
-    a: 'Assim que você confirmar o acréscimo de R$ 37, o Agenda Cheia será adicionado imediatamente à sua mesma área de membros do Bolos Lucrativos. Você receberá o acesso instantâneo por e-mail e WhatsApp.'
+    a: 'Assim que você confirmar o acréscimo de R$ 37, o acesso ao Agenda Cheia será liberado imediatamente no seu e-mail junto com o material principal. Você pode acessar pelo celular, tablet ou computador na mesma hora.'
   },
   {
-    q: 'E se eu tiver vergonha de vender ou não souber mexer no Instagram?',
-    a: 'O Agenda Cheia foi feito justamente para quem tem vergonha ou trava na hora de postar. Você não precisa aparecer em vídeos nem ser blogueira: você usa fotos simples dos seus potes e mensagens de texto prontas no WhatsApp e nos status.'
+    q: 'E se eu tiver vergonha de vender ou não souber o que postar?',
+    a: 'Você não precisa aparecer em vídeos, ser blogueira nem inventar nada. O método traz tudo pronto: é só abrir, copiar, colar as mensagens no WhatsApp e seguir o calendário de fotos simples do seu produto.'
   },
   {
-    q: 'Qual é a garantia?',
-    a: 'Você tem 7 dias de garantia incondicional. Se você acessar o material e achar que não te ajudou a conseguir mais pedidos, basta enviar uma mensagem e devolveremos 100% dos seus R$ 37.'
+    q: 'Como funciona a garantia de 7 dias?',
+    a: 'O risco é todo nosso. Você tem 7 dias completos para testar o calendário e os scripts. Se você achar que não serviu para você ou não te ajudou a fechar pedidos, basta pedir e devolveremos 100% do seu dinheiro, sem perguntas.'
   }
 ];
+
+export const DELIVERABLES = EXACT_DELIVERABLES;
