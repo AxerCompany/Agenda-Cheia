@@ -215,23 +215,27 @@ export const CALENDAR_SAMPLE: CalendarDayPreview[] = [
 export const FAQS = [
   {
     q: 'O que é exatamente o Agenda Cheia?',
-    a: 'O Agenda Cheia é o sistema simples e prático de vendas para bolos no pote que mostra o que postar, como chamar clientes e como movimentar seus pedidos durante a semana para faturar até R$5.000 por mês.'
+    a: 'O Agenda Cheia é um sistema simples e direto de vendas para confeitaria artesanal. Ele entrega um calendário com o que postar dia a dia, mensagens e scripts prontos para copiar e colar no WhatsApp, estratégias para reativar clientes antigas e um passo a passo para fechar pedidos constantes durante a semana.'
+  },
+  {
+    q: 'O Agenda Cheia serve apenas para bolo no pote ou para outros doces também?',
+    a: 'Serve para qualquer tipo de doce artesanal! Se você vende bolo no pote, brownies, copos da felicidade, fatias gourmet, brigadeiros, cones trufados ou tortas, a lógica de venda é exatamente a mesma. Os horários de postagem, as campanhas de WhatsApp, as respostas para "quanto custa?" e as mensagens de recompra funcionam perfeitamente para qualquer produto da sua confeitaria.'
   },
   {
     q: 'Eu já comprei as receitas. Por que preciso do Agenda Cheia agora?',
-    a: 'Porque aprender a fazer bolo no pote não basta. Existe uma diferença enorme entre saber fazer e conseguir vender. Sem um plano de vendas, você gasta dinheiro com ingredientes, faz os bolos e eles ficam parados na geladeira. O Agenda Cheia garante que você transforme o que aprendeu em pedidos reais todos os dias.'
-  },
-  {
-    q: 'Como vou receber o acesso?',
-    a: 'Assim que você confirmar o acréscimo de R$ 37, o acesso ao Agenda Cheia será liberado imediatamente no seu e-mail junto com o material principal. Você pode acessar pelo celular, tablet ou computador na mesma hora.'
+    a: 'Porque aprender a fazer o doce é apenas a primeira etapa. Existe uma diferença enorme entre saber preparar e conseguir vender. Sem um plano prático, você investe em ingredientes, prepara os doces e eles ficam parados na geladeira virando prejuízo. O Agenda Cheia garante que você transforme o que aprendeu em pedidos reais toda semana.'
   },
   {
     q: 'E se eu tiver vergonha de vender ou não souber o que postar?',
-    a: 'Você não precisa aparecer em vídeos, ser blogueira nem inventar nada. O método traz tudo pronto: é só abrir, copiar, colar as mensagens no WhatsApp e seguir o calendário de fotos simples do seu produto.'
+    a: 'Você não precisa gravar vídeos, aparecer na câmera nem ser influenciadora. O Agenda Cheia foi criado especialmente para quem tem vergonha: o material já traz as mensagens redigidas para você só copiar e colar, além de orientações simples de como fotografar o seu doce de forma irresistível.'
+  },
+  {
+    q: 'Como vou receber o acesso ao material?',
+    a: 'Assim que você confirmar o acréscimo de R$ 37 nesta página, os dados de acesso serão enviados imediatamente para o seu e-mail. Você poderá acessar no mesmo minuto pelo seu celular, computador ou tablet.'
   },
   {
     q: 'Como funciona a garantia de 7 dias?',
-    a: 'O risco é todo nosso. Você tem 7 dias completos para testar o calendário e os scripts. Se você achar que não serviu para você ou não te ajudou a fechar pedidos, basta pedir e devolveremos 100% do seu dinheiro, sem perguntas.'
+    a: 'O risco é 100% nosso. Você tem 7 dias para acessar o Agenda Cheia, testar o calendário e colocar os scripts para rodar no WhatsApp. Se você achar que o sistema não te ajudou a destravar pedidos ou não serviu para a sua rotina, basta pedir o reembolso e devolveremos cada centavo.'
   }
 ];
 

@@ -23,7 +23,7 @@ export const DeclineConfirmModal: React.FC<DeclineConfirmModalProps> = ({
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
-          className="bg-[#FFF4EC] border-2 border-[#E94F7A]/40 rounded-3xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl text-[#5A3A31] relative"
+          className="bg-[#FFF4EC] border-2 border-[#E94F7A]/40 rounded-2xl sm:rounded-3xl p-4 sm:p-8 max-w-md w-full text-center shadow-2xl text-[#5A3A31] relative max-h-[92vh] overflow-y-auto"
         >
           <button
             onClick={onCancelDecline}
