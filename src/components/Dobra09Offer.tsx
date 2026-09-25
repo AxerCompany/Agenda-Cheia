@@ -120,7 +120,7 @@ export const Dobra09Offer: React.FC<Dobra09OfferProps> = ({ onAddClick, onDeclin
               onClick={onDeclineClick}
               className="text-xs sm:text-sm text-[#5A3A31] hover:text-[#E94F7A] transition-colors underline underline-offset-4 decoration-[#5A3A31]/40 hover:decoration-[#E94F7A] cursor-pointer"
             >
-              Não, obrigado. Quero continuar apenas com o Bolos Lucrativos.
+              Não, obrigada. Quero continuar sem o plano de vendas.
             </button>
           </div>
 

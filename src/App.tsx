@@ -28,21 +28,30 @@ import { AllSweetsSection } from './components/AllSweetsSection';
 import { FaqSection } from './components/FaqSection';
 import { DeclineConfirmModal } from './components/DeclineConfirmModal';
 import { WiapyUpsell } from './components/WiapyUpsell';
-import { CHECKOUT_URL, EXACT_DELIVERABLES } from './data/upsellData';
+import { CHECKOUT_URL, EXACT_DELIVERABLES, DOWNSELL_URL, getDownsellCheckoutUrl } from './data/upsellData';
 
 export default function App() {
   const [isDeclineModalOpen, setIsDeclineModalOpen] = useState(false);
   const [hasDeclined, setHasDeclined] = useState(false);
 
-  const handleOpenDeclineModal = (e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleOpenDeclineModal = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
     setIsDeclineModalOpen(true);
   };
 
   const handleConfirmDecline = () => {
     setIsDeclineModalOpen(false);
     setHasDeclined(true);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const wiapySell = params.get('wiapy_sell');
+      const targetUrl = wiapySell
+        ? `https://wiapy.com/login?wiapy_sell=${encodeURIComponent(wiapySell)}`
+        : 'https://wiapy.com/login';
+      window.location.href = targetUrl;
+    } catch {
+      window.location.href = 'https://wiapy.com/login';
+    }
   };
 
   const handleScrollToOffer = (e: React.MouseEvent) => {
@@ -74,7 +83,10 @@ export default function App() {
         {/* Notice banner if user declined */}
         {hasDeclined && (
           <div className="bg-[#FFE3D3] border-b border-[#F0D5C7] px-4 py-3 text-center text-xs sm:text-sm text-[#3A241C] font-semibold">
-            Você optou por não adicionar o plano de vendas. Seu acesso padrão já foi enviado para seu e-mail. Caso mude de ideia antes de fechar a aba, você ainda pode garantir por R$ 37.
+            Você optou por não adicionar o plano de vendas. Seu acesso padrão já foi enviado para seu e-mail. Caso ainda queira aproveitar o desconto exclusivo por R$ 27 antes de sair,{' '}
+            <a href={getDownsellCheckoutUrl()} className="text-[#E94F7A] underline font-black ml-1">
+              clique aqui para garantir por R$ 27
+            </a>.
           </div>
         )}
 
@@ -446,10 +458,10 @@ export default function App() {
 
               {/* Main Wiapy One-Click Upsell */}
               <div className="w-full">
-                <WiapyUpsell />
+                <WiapyUpsell onDeclineClick={handleOpenDeclineModal} />
               </div>
 
-              {/* Security line requested by user */}
+              {/* Security line */}
               <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-[#5A3A31] font-bold mt-2">
                 <span className="inline-flex items-center gap-1 shrink-0">
                   <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#2FA866]" />
@@ -465,6 +477,18 @@ export default function App() {
                   <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F4B84A]" />
                   Pagamento Seguro
                 </span>
+              </div>
+
+              {/* Refusal button */}
+              <div className="pt-3 text-center">
+                <button
+                  type="button"
+                  id="offer-decline-button"
+                  onClick={handleOpenDeclineModal}
+                  className="text-xs text-[#8A6A61] hover:text-[#3A241C] underline cursor-pointer transition-colors"
+                >
+                  Não, obrigada. Quero continuar sem o plano de vendas.
+                </button>
               </div>
 
             </div>

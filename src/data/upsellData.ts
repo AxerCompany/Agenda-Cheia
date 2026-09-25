@@ -1,6 +1,23 @@
 import { DeliverableItem, ScriptExample, CalendarDayPreview } from '../types';
 
 export const CHECKOUT_URL = 'https://pay.wiapy.com/checkout/6a89032f8ec0ece76924f02d';
+export const DOWNSELL_URL = 'https://pay.wiapy.com/6ab5faff5dc228c326e57b0a';
+
+export const getDownsellCheckoutUrl = (): string => {
+  if (typeof window === 'undefined') return DOWNSELL_URL;
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const wiapySell = params.get('wiapy_sell');
+    if (wiapySell) {
+      const url = new URL(DOWNSELL_URL);
+      url.searchParams.set('wiapy_sell', wiapySell);
+      return url.toString();
+    }
+  } catch {
+    // fallback
+  }
+  return DOWNSELL_URL;
+};
 
 export interface SocialProofItem {
   id: number;

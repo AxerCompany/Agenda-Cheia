@@ -83,7 +83,7 @@ export const Dobra10FinalReinforcement: React.FC<Dobra10FinalReinforcementProps>
               onClick={onDeclineClick}
               className="text-xs text-[#5A3A31] hover:text-[#E94F7A] transition-colors underline underline-offset-4 decoration-[#5A3A31]/40 hover:decoration-[#E94F7A] cursor-pointer max-w-md mx-auto block leading-relaxed"
             >
-              Não, obrigado. Quero continuar apenas com o Bolos Lucrativos e abrir mão do Agenda Cheia por enquanto.
+              Não, obrigada. Quero continuar sem o plano de vendas.
             </button>
           </div>
 
