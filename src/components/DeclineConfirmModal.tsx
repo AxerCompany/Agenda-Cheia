@@ -47,12 +47,12 @@ export const DeclineConfirmModal: React.FC<DeclineConfirmModalProps> = ({
 
           {/* Headline */}
           <h3 className="text-lg sm:text-2xl font-black text-[#3A241C] mb-2 leading-snug">
-            Eu não quero que você fique no improviso e com a agenda vazia por causa de <span className="text-[#E94F7A]">R$ 10</span>.
+            Não quero que você fique sem um plano de vendas por causa de <span className="text-[#E94F7A]">R$ 10</span>.
           </h3>
 
           {/* Emotional connection & reality check */}
           <p className="text-xs sm:text-sm text-[#5A3A31] mb-4 leading-relaxed font-medium">
-            Você já deu o primeiro passo e investiu para aprender as receitas. Mas ver ingrediente comprado e <strong className="text-[#3A241C] font-black">bolo parado na geladeira</strong> é a pior sensação que existe. Para você não sair sem um plano diário de vendas, liberei um <strong className="text-[#E94F7A] font-black">desconto exclusivo de última oportunidade</strong>:
+            Você já garantiu o <strong className="text-[#3A241C] font-black">Bolos Lucrativos</strong> para organizar receitas, custos, preços e lucro. Mas ter receita sem saber como divulgar e vender faz o bolo ficar parado. Para você não sair sem o seu plano diário, liberei um <strong className="text-[#E94F7A] font-black">desconto exclusivo de última oportunidade</strong>:
           </p>
 
           {/* Special Price Callout: 37 -> 27 */}
@@ -73,30 +73,30 @@ export const DeclineConfirmModal: React.FC<DeclineConfirmModalProps> = ({
             </div>
 
             <p className="text-[11px] sm:text-xs text-[#5A3A31] font-bold mt-1.5 leading-snug">
-              Pagamento único • Menos do que você lucra vendendo <span className="text-[#3A241C] underline decoration-[#E94F7A]">1 único bolo no pote</span>.
+              Pagamento único • Menos do que você lucra vendendo <span className="text-[#3A241C] underline decoration-[#E94F7A]">1 único bolo</span>.
             </p>
           </div>
 
           {/* What she takes with the discount */}
           <div className="bg-[#FFF4EC] p-3.5 sm:p-4 rounded-xl border border-[#F0D5C7] text-left mb-5 text-xs text-[#3A241C] space-y-2">
             <p className="text-[11px] font-black uppercase tracking-wider text-[#E94F7A] mb-1">
-              Você recebe exatamente o sistema completo:
+              Você recebe o Método Agenda Cheia completo:
             </p>
             <div className="flex items-start gap-2 font-bold leading-tight">
               <Check className="w-4 h-4 text-[#2FA866] shrink-0 mt-0.5" />
-              <span><strong>Calendário de 30 dias:</strong> o que postar e oferecer todo dia</span>
+              <span><strong>Calendário de 30 dias:</strong> o que postar sem inventar todo dia</span>
             </div>
             <div className="flex items-start gap-2 font-bold leading-tight">
               <Check className="w-4 h-4 text-[#2FA866] shrink-0 mt-0.5" />
-              <span><strong>Scripts para WhatsApp:</strong> respostas prontas para "quanto custa?"</span>
+              <span><strong>Campanhas WhatsApp:</strong> mensagens prontas para chamar clientes</span>
             </div>
             <div className="flex items-start gap-2 font-bold leading-tight">
               <Check className="w-4 h-4 text-[#2FA866] shrink-0 mt-0.5" />
-              <span><strong>Sistema de Recompra:</strong> clientes antigas pedindo toda semana</span>
+              <span><strong>Scripts para Fechar Pedidos:</strong> o que responder na pergunta de preço</span>
             </div>
             <div className="flex items-start gap-2 font-bold leading-tight">
               <Check className="w-4 h-4 text-[#2FA866] shrink-0 mt-0.5" />
-              <span><strong>Garantia incondicional de 7 dias:</strong> risco 100% nosso</span>
+              <span><strong>Sistema de Recompra & Indicação:</strong> movimente clientes fiéis</span>
             </div>
           </div>
 
@@ -107,7 +107,7 @@ export const DeclineConfirmModal: React.FC<DeclineConfirmModalProps> = ({
               href={downsellLink}
               className="w-full py-4 px-4 sm:px-6 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-sm sm:text-base shadow-lg shadow-[#E94F7A]/30 cursor-pointer flex items-center justify-center gap-2 transition-all border border-[#F27598] no-underline hover:scale-[1.01] active:scale-[0.99] text-center"
             >
-              <span>SIM! QUERO O AGENDA CHEIA POR R$ 27</span>
+              <span>SIM, QUERO ADICIONAR O MÉTODO AGENDA CHEIA POR R$ 27</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
             </a>
 
@@ -122,7 +122,7 @@ export const DeclineConfirmModal: React.FC<DeclineConfirmModalProps> = ({
               onClick={onConfirmDecline}
               className="w-full py-2 px-3 text-[11px] sm:text-xs text-[#8A6A61] hover:text-[#3A241C] transition-colors cursor-pointer underline hover:no-underline leading-snug"
             >
-              Não, quero abrir mão do desconto de R$ 27 e continuar vendendo no improviso.
+              Não, obrigado. Quero continuar apenas com o Bolos Lucrativos.
             </button>
           </div>
         </motion.div>

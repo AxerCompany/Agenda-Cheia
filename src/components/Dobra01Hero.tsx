@@ -1,30 +1,28 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  Sparkles, 
-  Zap,
-  TrendingUp,
-  MessageCircle,
-  Calendar,
-  ChevronDown
-} from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { AgendaMockup } from './AgendaMockup';
 
-export const Dobra01Hero: React.FC = () => {
+interface Dobra01HeroProps {
+  onCtaClick?: (e: React.MouseEvent) => void;
+}
+
+export const Dobra01Hero: React.FC<Dobra01HeroProps> = ({ onCtaClick }) => {
   return (
-    <section id="dobra-01" className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 bg-[#FFF4EC] text-[#5A3A31] border-b border-[#F0D5C7]">
+    <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-18 bg-[#FFF4EC] text-[#5A3A31] border-b border-[#F0D5C7]">
       {/* Background ambient decorative light */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#FFE3D3]/70 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#FFE3D3]/80 via-transparent to-transparent pointer-events-none" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10 text-center">
         
-        {/* Selo no topo */}
+        {/* Subtle top indicator */}
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F4B84A] text-[#3A241C] text-xs sm:text-sm font-extrabold tracking-wider uppercase mb-6 shadow-sm border border-[#E5A532]"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFE3D3] text-[#E94F7A] text-xs sm:text-sm font-extrabold tracking-wider uppercase mb-5 border border-[#F3CFBE] shadow-2xs"
         >
-          <Sparkles className="w-4 h-4 text-[#3A241C]" />
-          <span>OFERTA ESPECIAL APÓS A COMPRA</span>
+          <Sparkles className="w-4 h-4 fill-current text-[#E94F7A]" />
+          <span>Método Agenda Cheia • Sistema de Vendas</span>
         </motion.div>
 
         {/* Main Headline */}
@@ -32,87 +30,56 @@ export const Dobra01Hero: React.FC = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-2xl sm:text-4xl md:text-5xl font-black text-[#3A241C] leading-tight sm:leading-tight tracking-tight mb-6"
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-[52px] font-black text-[#3A241C] leading-[1.18] sm:leading-[1.15] tracking-tight mb-5 max-w-2xl mx-auto break-words"
         >
-          Agora falta transformar suas receitas em{' '}
-          <span className="text-[#E94F7A] underline decoration-[#E94F7A]/40 decoration-wavy decoration-2">
-            pedidos durante a semana
-          </span>
+          Pare de esperar os pedidos aparecerem
         </motion.h1>
 
-        {/* Confirmation card */}
-        <motion.div
+        {/* Sub-headline */}
+        <motion.h2 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-base sm:text-xl md:text-2xl font-bold text-[#E94F7A] leading-relaxed max-w-2xl mx-auto mb-6"
+        >
+          Aprenda uma rotina simples para divulgar seus doces, chamar clientes e conseguir novos pedidos durante a semana.
+        </motion.h2>
+
+        {/* Descriptive Body */}
+        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="bg-[#FFE3D3] border border-[#F3CFBE] rounded-2xl p-5 sm:p-6 mb-8 text-left sm:text-center shadow-sm"
-        >
-          <p className="text-base sm:text-lg text-[#3A241C] leading-relaxed mb-3">
-            Você acabou de garantir o acesso ao <strong className="text-[#E94F7A] font-extrabold">Bolos Lucrativos</strong>.
-          </p>
-          <p className="text-sm sm:text-base text-[#5A3A31] leading-relaxed mb-4">
-            Agora você já tem receitas, lista de compras, cálculo de custo, preço sugerido e lucro estimado.
-          </p>
-
-          <div className="border-t border-[#F0CFBE] pt-4 mt-4">
-            <p className="text-sm sm:text-base text-[#5A3A31] mb-2 font-medium">
-              Mas existe uma parte que muita gente trava:
-            </p>
-            <p className="text-base sm:text-lg font-black text-[#E94F7A] bg-[#FFF4EC] border border-[#E94F7A]/30 px-4 py-2.5 rounded-xl inline-block shadow-xs">
-              como divulgar, chamar clientes e conseguir pedidos de verdade.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Presentation Box */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-[#FFE3D3] border-2 border-[#E94F7A]/40 rounded-3xl p-6 sm:p-8 shadow-md mb-4 relative overflow-hidden"
+          className="space-y-3 text-sm sm:text-lg text-[#5A3A31] font-medium leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8 text-left sm:text-center bg-[#FFE3D3]/50 p-4 sm:p-5 rounded-2xl border border-[#F3CFBE]"
         >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#E94F7A]/10 rounded-full blur-2xl pointer-events-none" />
-
-          <p className="text-xs sm:text-sm font-bold tracking-wider text-[#E94F7A] uppercase mb-2">
-            Por isso, antes de finalizar seu acesso, você pode adicionar o:
+          <p>
+            O <strong className="text-[#3A241C] font-extrabold">Método Agenda Cheia</strong> foi criado para quem quer parar de postar no improviso e começar a vender com mais direção.
           </p>
-
-          <h2 className="text-3xl sm:text-5xl font-black text-[#3A241C] tracking-tight mb-2">
-            Agenda Cheia
-          </h2>
-          <h3 className="text-lg sm:text-2xl font-bold text-[#E94F7A] mb-5">
-            Sistema de Vendas para Bolos no Pote
-          </h3>
-
-          {/* Feature Highlights Pills */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6 text-xs text-[#3A241C]">
-            <div className="bg-[#FFF4EC] border border-[#F0D5C7] rounded-lg p-2.5 flex items-center justify-center gap-1.5 font-bold shadow-xs">
-              <Calendar className="w-3.5 h-3.5 text-[#E94F7A] shrink-0" />
-              <span>30 Dias de Posts</span>
-            </div>
-            <div className="bg-[#FFF4EC] border border-[#F0D5C7] rounded-lg p-2.5 flex items-center justify-center gap-1.5 font-bold shadow-xs">
-              <MessageCircle className="w-3.5 h-3.5 text-[#2FA866] shrink-0" />
-              <span>Scripts WhatsApp</span>
-            </div>
-            <div className="bg-[#FFF4EC] border border-[#F0D5C7] rounded-lg p-2.5 flex items-center justify-center gap-1.5 font-bold shadow-xs">
-              <Zap className="w-3.5 h-3.5 text-[#F4B84A] shrink-0" />
-              <span>Recompra Ativa</span>
-            </div>
-            <div className="bg-[#FFF4EC] border border-[#F0D5C7] rounded-lg p-2.5 flex items-center justify-center gap-1.5 font-bold shadow-xs">
-              <TrendingUp className="w-3.5 h-3.5 text-[#E94F7A] shrink-0" />
-              <span>Indicação Fácil</span>
-            </div>
-          </div>
-
-          <p className="text-sm sm:text-base text-[#5A3A31] leading-relaxed max-w-xl mx-auto mb-4 font-medium">
-            Um plano simples para você saber o que postar, como divulgar, como chamar clientes, como responder interessadas e como buscar pedidos durante a semana usando WhatsApp, status, indicação e recompra.
+          <p className="text-xs sm:text-base text-[#3A241C] font-semibold">
+            Serve tanto para quem está começando quanto para quem já vende e quer ter mais constância nos pedidos.
           </p>
-
-          <div className="inline-flex items-center gap-2 text-xs font-bold text-[#E94F7A] bg-[#FFF4EC] px-4 py-2 rounded-full border border-[#F0D5C7]">
-            <span>Veja abaixo como funciona o sistema passo a passo</span>
-            <ChevronDown className="w-4 h-4 animate-bounce text-[#E94F7A]" />
-          </div>
         </motion.div>
+
+        {/* [ESPAÇO PARA MOCKUP PRINCIPAL DO MÉTODO AGENDA CHEIA] */}
+        <div className="w-full">
+          <AgendaMockup />
+        </div>
+
+        {/* Fast Action CTA button */}
+        <div className="max-w-md mx-auto pt-4 w-full">
+          <a
+            href="#oferta"
+            onClick={onCtaClick}
+            className="w-full py-4 px-6 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-sm sm:text-lg shadow-xl shadow-[#E94F7A]/25 transition-all flex items-center justify-center gap-2 border border-[#F27598] no-underline cursor-pointer text-center leading-tight hover:scale-[1.01] active:scale-[0.99]"
+          >
+            <span>SIM, QUERO O MÉTODO AGENDA CHEIA</span>
+            <ArrowRight className="w-5 h-5 shrink-0" />
+          </a>
+          <p className="text-xs text-[#8A6A61] mt-2 font-medium">
+            Acesso digital imediato • Apenas R$ 37
+          </p>
+        </div>
+
       </div>
     </section>
   );

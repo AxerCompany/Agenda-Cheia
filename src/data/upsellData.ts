@@ -77,86 +77,86 @@ export const TESTIMONIALS: SocialProofItem[] = [
 export const EXACT_DELIVERABLES: DeliverableItem[] = [
   {
     id: 1,
-    title: 'Calendário de vendas de 30 dias',
-    subtitle: 'Saiba o que postar e oferecer todo dia',
-    description: 'Saiba o que postar e oferecer todo dia. Chega de acordar sem saber o que postar nos stories ou no status: você recebe a rotina diária de posts, fotos de bastidores e chamadas de desejo prontas.',
+    title: '📅 Calendário de Vendas de 30 Dias',
+    subtitle: 'Saiba o que divulgar durante o mês sem ficar pensando todos os dias no que postar',
+    description: 'Saiba o que divulgar durante o mês sem ficar pensando todos os dias no que postar.',
     iconName: 'CalendarCheck',
     badge: 'Rotina de 30 Dias',
     highlights: [
       'Planejamento de segunda a domingo para aquecer e vender',
       'O que postar de manhã, tarde e noite para despertar desejo',
-      'Formatos rápidos: fotos de colheradas, bastidores e fornada fresca',
-      'Adaptação para qualquer sabor de bolo no pote'
+      'Ideias de fotos de colheradas, bastidores e fornada fresca',
+      'Adaptação prática para qualquer tipo de doce'
     ]
   },
   {
     id: 2,
-    title: 'Campanhas prontas para WhatsApp',
-    subtitle: 'Copie, cole e envie',
-    description: 'Copie, cole e envie. Textos prontos para status, direct e mensagens diretas que chamam a atenção das pessoas certas e geram pedidos rápidos sem você parecer chata ou inconveniente.',
+    title: '📲 Campanhas Prontas para WhatsApp',
+    subtitle: 'Mensagens prontas para divulgar seus doces, criar ofertas e chamar clientes',
+    description: 'Mensagens prontas para divulgar seus doces, criar ofertas e chamar clientes.',
     iconName: 'MessageSquareShare',
-    badge: 'Copiar e Colar',
+    badge: 'Copiar e Enviar',
     highlights: [
-      'Textos persuasivos com gatilhos de água na boca e exclusividade',
-      'Avisos de fornada fresca do dia para disparar pedidos',
-      'Combos de 2 ou 3 potes para dobrar seu faturamento por cliente',
-      'Mensagens estratégicas para status que fazem o celular apitar'
+      'Mensagens prontas para status que atraem pedidos',
+      'Avisos de fornada fresca do dia para vender rápido',
+      'Ofertas irresistíveis de combos para faturar mais',
+      'Disparos sutis e educados sem parecer invasiva'
     ]
   },
   {
     id: 3,
-    title: 'Scripts para fechar pedidos',
-    subtitle: 'Saiba o que responder quando perguntam "quanto é?"',
-    description: 'Saiba o que responder quando perguntam "quanto é?". Modelos de resposta que valorizam seu bolo, tiram o foco do preço, desarmam o "vou ver e te aviso" e transformam curiosas em clientes pagantes.',
+    title: '💬 Scripts para Fechar Pedidos',
+    subtitle: 'Saiba o que responder quando uma cliente pergunta preço, sabores, entrega ou diz que vai pensar',
+    description: 'Saiba o que responder quando uma cliente pergunta preço, sabores, entrega ou diz que vai pensar.',
     iconName: 'Sparkles',
-    badge: 'Anti-Vácuo & Fechamento',
+    badge: 'Fechamento Direto',
     highlights: [
-      'Como passar o preço valorizando a cremosidade e os ingredientes',
-      'Como reverter o "vou ver e te aviso" em pedido confirmado',
-      'O que responder quando a cliente diz "achei caro na padaria"',
-      'Roteiro simples para fechar endereço, Pix e horário de entrega'
+      'O que falar na pergunta de preço para não assustar',
+      'O que responder quando a cliente fala "vou ver e te aviso"',
+      'Como explicar taxa de entrega e sabores com clareza',
+      'Como conduzir a conversa até a confirmação do Pix'
     ]
   },
   {
     id: 4,
-    title: 'Sistema de recompra',
-    subtitle: 'Faça as clientes antigas comprarem de novo',
-    description: 'Faça as clientes antigas comprarem de novo. Não gaste energia caçando novos clientes todos os dias. Ative quem já provou seu bolo e faça ela pedir toda semana com mensagens de retorno programadas.',
+    title: '🔁 Sistema de Recompra',
+    subtitle: 'Aprenda a chamar clientes que já compraram para fazer novos pedidos',
+    description: 'Aprenda a chamar clientes que já compraram para fazer novos pedidos.',
     iconName: 'RotateCcw',
-    badge: 'Vendas Recorrentes',
+    badge: 'Clientes Fiéis',
     highlights: [
-      'Mensagem de pós-venda 24h para coletar elogio e fidelizar',
-      'Lembrete automático para sobremesa de quinta e sexta-feira',
-      'Aviso VIP de novos sabores para clientes especiais',
-      'Como criar uma rotina de pedidos recorrentes sem esforço'
+      'Mensagem de pós-venda para fidelizar no dia seguinte',
+      'Lembrete programado para sobremesa do fim de semana',
+      'Avisos de sabores novos que despertam vontade imediata',
+      'Como fazer a mesma cliente pedir toda semana'
     ]
   },
   {
     id: 5,
-    title: 'Campanha de indicação',
-    subtitle: 'Suas clientes trazendo novas clientes',
-    description: 'Suas clientes trazendo novas clientes. Um método prático para suas clientes divulgarem seus bolos para vizinhas, amigas de trabalho e familiares através de um incentivo simples.',
+    title: '🤝 Campanha de Indicação',
+    subtitle: 'Use clientes satisfeitas para fazer seus doces chegarem até novas pessoas',
+    description: 'Use clientes satisfeitas para fazer seus doces chegarem até novas pessoas.',
     iconName: 'UsersRound',
-    badge: 'Multiplicação de Pedidos',
+    badge: 'Novos Contatos',
     highlights: [
-      'Script para incentivar indicações em empresas, salões e escritórios',
-      'Ação "Sobremesa Compartilhada" que gera boca a boca',
-      'Como fazer as clientes tirarem fotos dos potes e marcarem você',
-      'Novos clientes chegando toda semana de graça'
+      'Estratégia simples para clientes indicarem amigas e colegas',
+      'Incentivo sutil que faz a recomendação acontecer naturalmente',
+      'Como fazer sua confeitaria ser comentada no trabalho ou vizinhança',
+      'Novos clientes chegando toda semana sem você gastar nada'
     ]
   },
   {
     id: 6,
-    title: 'Passo a passo para pedidos',
-    subtitle: 'Um plano para buscar seus primeiros pedidos',
-    description: 'Um plano para buscar seus primeiros pedidos. O caminho prático para quem está começando do zero ou quer destravar a agenda nos próximos dias sem ficar perdida ou esperando a sorte.',
+    title: '🚀 Plano para Primeiros ou Novos Pedidos',
+    subtitle: 'Um passo a passo simples para quem está começando do zero ou quer voltar a movimentar as vendas',
+    description: 'Um passo a passo simples para quem está começando do zero ou quer voltar a movimentar as vendas.',
     iconName: 'Target',
-    badge: 'Plano Direto ao Ponto',
+    badge: 'Comece Já',
     highlights: [
-      'Roteiro de ação para as primeiras 24h a 48h',
-      'Como garantir os primeiros 10 a 20 pedidos antes de produzir',
-      'Plano de emergência para girar potes e evitar sobras',
-      'Rotina semanal equilibrada para manter pedidos constantes'
+      'Roteiro de ação para destravar suas vendas hoje mesmo',
+      'Como garantir os primeiros pedidos antes de produzir',
+      'Plano rápido para movimentar a semana sem desperdício',
+      'Rotina leve para manter constância sem sobrecarga'
     ]
   }
 ];

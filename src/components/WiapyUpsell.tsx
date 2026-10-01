@@ -47,7 +47,7 @@ export const WiapyUpsell: React.FC<WiapyUpsellProps> = ({ onDeclineClick }) => {
         window.initWiapyUpsell({
           elementId: 'wiapy_upsell',
           linkUrl: CHECKOUT_URL,
-          linkText: 'SIM! QUERO ADICIONAR O AGENDA CHEIA POR R$37',
+          linkText: 'SIM, QUERO ADICIONAR O MÉTODO AGENDA CHEIA',
           styles: {
             backgroundColor: '#E94F7A',
             hoverBackgroundColor: '#D83D69',
@@ -62,7 +62,7 @@ export const WiapyUpsell: React.FC<WiapyUpsellProps> = ({ onDeclineClick }) => {
             hoverTransform: 'scale(1.02)'
           },
           refusalLinkUrl: '#recusar',
-          refusalLinkText: 'Não, obrigada. Quero continuar sem o plano de vendas.',
+          refusalLinkText: 'Não, obrigado. Quero continuar apenas com o Bolos Lucrativos.',
           refusalLinkColor: '#8A6A61'
         });
         setIsMountedInWiapy(true);
@@ -98,7 +98,7 @@ export const WiapyUpsell: React.FC<WiapyUpsellProps> = ({ onDeclineClick }) => {
             href={CHECKOUT_URL}
             className="w-full py-4 px-6 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-sm sm:text-base shadow-xl shadow-[#E94F7A]/25 flex items-center justify-center gap-2 border border-[#F27598] no-underline transition-all cursor-pointer text-center"
           >
-            <span>SIM! QUERO ADICIONAR O AGENDA CHEIA POR R$37</span>
+            <span>SIM, QUERO ADICIONAR O MÉTODO AGENDA CHEIA</span>
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
           </a>
           <button
@@ -106,7 +106,7 @@ export const WiapyUpsell: React.FC<WiapyUpsellProps> = ({ onDeclineClick }) => {
             onClick={onDeclineClick}
             className="w-full block text-center text-xs sm:text-sm text-[#8A6A61] hover:text-[#3A241C] underline cursor-pointer transition-colors"
           >
-            Não, obrigada. Quero continuar sem o plano de vendas.
+            Não, obrigado. Quero continuar apenas com o Bolos Lucrativos.
           </button>
         </div>
       )}
