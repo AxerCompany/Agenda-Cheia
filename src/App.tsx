@@ -54,9 +54,9 @@ export default function App() {
         {/* Notice banner if user declined */}
         {hasDeclined && (
           <div className="bg-[#FFE3D3] border-b border-[#F0D5C7] px-4 py-3 text-center text-xs sm:text-sm text-[#3A241C] font-semibold">
-            Você optou por não adicionar o plano de vendas. Seu acesso padrão já foi enviado para seu e-mail. Caso ainda queira aproveitar o desconto exclusivo por R$ 27 antes de sair,{' '}
+            Você optou por não adicionar o plano de vendas. Seu acesso padrão já foi enviado para seu e-mail. Caso ainda queira aproveitar o desconto exclusivo por R$ 19,90 antes de sair,{' '}
             <a href={getDownsellCheckoutUrl()} className="text-[#E94F7A] underline font-black ml-1">
-              clique aqui para garantir por R$ 27
+              clique aqui para garantir por R$ 19,90
             </a>.
           </div>
         )}

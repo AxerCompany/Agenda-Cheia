@@ -129,7 +129,7 @@ export const UpsellHero: React.FC<UpsellHeroProps> = ({ onCtaClick }) => {
             onClick={onCtaClick}
             className="w-full py-4 px-6 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-sm sm:text-base shadow-xl shadow-[#E94F7A]/25 transition-all flex items-center justify-center gap-2 border border-[#F27598] no-underline cursor-pointer text-center leading-tight hover:scale-[1.01] active:scale-[0.99]"
           >
-            <span>SIM, QUERO ADICIONAR O MÉTODO AGENDA CHEIA</span>
+            <span>LIBERAR ACESSO</span>
             <ArrowRight className="w-5 h-5 shrink-0" />
           </a>
         </div>

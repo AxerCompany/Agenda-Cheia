@@ -248,7 +248,7 @@ export const FAQS = [
   },
   {
     q: 'Como vou receber o acesso ao material?',
-    a: 'Assim que você confirmar o acréscimo de R$ 37 nesta página, os dados de acesso serão enviados imediatamente para o seu e-mail. Você poderá acessar no mesmo minuto pelo seu celular, computador ou tablet.'
+    a: 'Assim que você confirmar o acréscimo de R$ 27 nesta página, os dados de acesso serão enviados imediatamente para o seu e-mail. Você poderá acessar no mesmo minuto pelo seu celular, computador ou tablet.'
   },
   {
     q: 'Como funciona a garantia de 7 dias?',

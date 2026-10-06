@@ -63,7 +63,7 @@ export const StickyBottomBar: React.FC = () => {
                 className="w-full sm:w-auto px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-xs sm:text-base tracking-wide shadow-lg shadow-[#E94F7A]/30 cursor-pointer flex items-center justify-center gap-2 border border-[#F27598] transition-all no-underline text-center"
               >
                 <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
-                <span className="flex-1 sm:flex-none">SIM! QUERO O AGENDA CHEIA</span>
+                <span className="flex-1 sm:flex-none">LIBERAR ACESSO</span>
                 <ArrowRight className="w-4 h-4 text-white shrink-0" />
               </a>
             </div>

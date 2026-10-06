@@ -47,7 +47,7 @@ export const WiapyUpsell: React.FC<WiapyUpsellProps> = ({ onDeclineClick }) => {
         window.initWiapyUpsell({
           elementId: 'wiapy_upsell',
           linkUrl: CHECKOUT_URL,
-          linkText: 'SIM, QUERO ADICIONAR O MÉTODO AGENDA CHEIA',
+          linkText: 'LIBERAR ACESSO',
           styles: {
             backgroundColor: '#E94F7A',
             hoverBackgroundColor: '#D83D69',
@@ -98,7 +98,7 @@ export const WiapyUpsell: React.FC<WiapyUpsellProps> = ({ onDeclineClick }) => {
             href={CHECKOUT_URL}
             className="w-full py-4 px-6 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-sm sm:text-base shadow-xl shadow-[#E94F7A]/25 flex items-center justify-center gap-2 border border-[#F27598] no-underline transition-all cursor-pointer text-center"
           >
-            <span>SIM, QUERO ADICIONAR O MÉTODO AGENDA CHEIA</span>
+            <span>LIBERAR ACESSO</span>
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
           </a>
           <button

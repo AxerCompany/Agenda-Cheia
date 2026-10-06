@@ -59,7 +59,7 @@ export const Dobra07Offer: React.FC<Dobra07OfferProps> = ({ onDeclineClick }) =>
               Acesso digital imediato
             </span>
             <div className="text-2xl sm:text-4xl font-black text-[#3A241C]">
-              Por apenas <span className="text-[#E94F7A]">R$37</span>
+              Por apenas <span className="text-[#E94F7A]">R$27</span>
             </div>
             <p className="text-[11px] sm:text-xs text-[#5A3A31] font-semibold mt-1">
               Pagamento único • Sem mensalidades

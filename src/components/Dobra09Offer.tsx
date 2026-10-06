@@ -70,7 +70,7 @@ export const Dobra09Offer: React.FC<Dobra09OfferProps> = ({ onAddClick, onDeclin
 
             <div className="flex items-baseline justify-center gap-1 mb-2">
               <span className="text-xl sm:text-2xl font-bold text-[#3A241C]">R$</span>
-              <span className="text-5xl sm:text-7xl font-black text-[#E94F7A] tracking-tight">37</span>
+              <span className="text-5xl sm:text-7xl font-black text-[#E94F7A] tracking-tight">27</span>
               <span className="text-lg sm:text-xl font-bold text-[#5A3A31]">,00</span>
             </div>
 
@@ -93,7 +93,7 @@ export const Dobra09Offer: React.FC<Dobra09OfferProps> = ({ onAddClick, onDeclin
             className="w-full py-5 sm:py-6 px-8 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-lg sm:text-2xl tracking-wide shadow-xl shadow-[#E94F7A]/30 transition-all cursor-pointer flex items-center justify-center gap-3 border border-[#F27598] mb-4 no-underline"
           >
             <CheckCircle2 className="w-7 h-7 text-white shrink-0" />
-            <span>LIBERAR MEU ACESSO AGORA</span>
+            <span>LIBERAR ACESSO</span>
             <ArrowRight className="w-6 h-6 text-white shrink-0 hidden sm:inline-block" />
           </motion.a>
 

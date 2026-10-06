@@ -47,7 +47,7 @@ export const DeclineConfirmModal: React.FC<DeclineConfirmModalProps> = ({
 
           {/* Headline */}
           <h3 className="text-lg sm:text-2xl font-black text-[#3A241C] mb-2 leading-snug">
-            Não quero que você fique sem um plano de vendas por causa de <span className="text-[#E94F7A]">R$ 10</span>.
+            Não quero que você fique sem um plano de vendas por causa de <span className="text-[#E94F7A]">R$ 19,90</span>.
           </h3>
 
           {/* Emotional connection & reality check */}
@@ -55,21 +55,21 @@ export const DeclineConfirmModal: React.FC<DeclineConfirmModalProps> = ({
             Você já garantiu o <strong className="text-[#3A241C] font-black">Bolos Lucrativos</strong> para organizar receitas, custos, preços e lucro. Mas ter receita sem saber como divulgar e vender faz o bolo ficar parado. Para você não sair sem o seu plano diário, liberei um <strong className="text-[#E94F7A] font-black">desconto exclusivo de última oportunidade</strong>:
           </p>
 
-          {/* Special Price Callout: 37 -> 27 */}
+          {/* Special Price Callout: 27 -> 19,90 */}
           <div className="bg-[#FFE3D3] border-2 border-[#E94F7A] rounded-2xl p-4 sm:p-5 mb-4 shadow-sm relative overflow-hidden">
             <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-[#E94F7A] text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1">
               <Tag className="w-3 h-3" />
-              <span>R$ 10 OFF</span>
+              <span>SUPER DESCONTO</span>
             </div>
 
             <span className="text-[11px] sm:text-xs font-bold text-[#8A6A61] uppercase tracking-wider block mb-1">
-              De <span className="line-through font-extrabold text-[#8A6A61]">R$ 37,00</span> por apenas:
+              De <span className="line-through font-extrabold text-[#8A6A61]">R$ 27,00</span> por apenas:
             </span>
 
             <div className="text-2xl sm:text-4xl font-black text-[#3A241C] flex items-baseline justify-center gap-1">
               <span className="text-base sm:text-xl font-extrabold text-[#E94F7A]">R$</span>
-              <span className="text-[#E94F7A] text-3xl sm:text-5xl font-black tracking-tight">27</span>
-              <span className="text-base sm:text-xl font-extrabold text-[#E94F7A]">,00</span>
+              <span className="text-[#E94F7A] text-3xl sm:text-5xl font-black tracking-tight">19</span>
+              <span className="text-base sm:text-xl font-extrabold text-[#E94F7A]">,90</span>
             </div>
 
             <p className="text-[11px] sm:text-xs text-[#5A3A31] font-bold mt-1.5 leading-snug">
@@ -107,7 +107,7 @@ export const DeclineConfirmModal: React.FC<DeclineConfirmModalProps> = ({
               href={downsellLink}
               className="w-full py-4 px-4 sm:px-6 rounded-2xl bg-[#E94F7A] hover:bg-[#D83D69] text-white font-black text-sm sm:text-base shadow-lg shadow-[#E94F7A]/30 cursor-pointer flex items-center justify-center gap-2 transition-all border border-[#F27598] no-underline hover:scale-[1.01] active:scale-[0.99] text-center"
             >
-              <span>SIM, QUERO ADICIONAR O MÉTODO AGENDA CHEIA POR R$ 27</span>
+              <span>LIBERAR ACESSO POR R$ 19,90</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
             </a>
 

@@ -40,7 +40,7 @@ export const UpsellOffer: React.FC<UpsellOfferProps> = ({ onDeclineClick }) => {
               Adicione agora ao seu pedido por apenas:
             </h3>
             <div className="text-3xl sm:text-5xl font-black text-[#E94F7A]">
-              R$37,00
+              R$27,00
             </div>
             <p className="text-xs text-[#5A3A31] font-bold mt-2">
               É só clicar uma vez e o Método Agenda Cheia será adicionado ao seu acesso.
